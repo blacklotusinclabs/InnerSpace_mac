@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Qix' target in the 'Qix' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

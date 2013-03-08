@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'InnerSpace' target in the 'InnerSpace' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
