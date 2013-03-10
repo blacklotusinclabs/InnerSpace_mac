@@ -12,10 +12,11 @@
 
 @implementation PreferencesPanelController
 
-- (id) init
+- (id) initForScreen: (NSScreen *)aScreen
 {
     if(nil != (self = [super init]))
     {
+        screen = aScreen;
     }
     
     return self;
@@ -23,7 +24,7 @@
 
 - (void) dealloc
 {
-    // [window performClose:nil];
+    [window performClose:nil];
     [emptyView release];
     [super dealloc];
 }
@@ -34,8 +35,6 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     runSpeed = [defaults floatForKey: @"runSpeed"];
     
-    screen = [window screen];
-    
     [speedSlider setFloatValue: runSpeed];
     [emptyView retain];
     
@@ -45,6 +44,16 @@
                                              selector:@selector(handleNotification:)
                                                  name:NSWindowWillCloseNotification
                                                object:window];
+    NSRect screenFrame = [screen frame];
+    NSRect windowFrame = [window frame];
+    
+    // Set the frame...
+    windowFrame.origin.x = screenFrame.origin.x + 100;
+    windowFrame.origin.y = screenFrame.origin.y + 100;
+    
+    // Show the window...
+    [window setFrame:windowFrame
+             display:NO];
     [window makeKeyAndOrderFront:self];
 }
 
@@ -53,25 +62,28 @@
     if([[notification name] isEqualToString:NSWindowWillCloseNotification])
     {
         [[NSNotificationCenter defaultCenter] removeObserver:self];
-        [parentController closeAllPreferencesPanels];
+        [parentController closePreferencePanel:self];
     }
 }
 
 // interface callbacks
 - (void) selectSaver: (id)sender
 {
-    id module = nil;
-    NSInteger row = [moduleList selectedRowInColumn: [moduleList selectedColumn]];
+    NSInteger row = [moduleList selectedRow];
     NSMutableDictionary *modules = [parentController modules];
     
     if(row >= 0)
     {
-        NSDictionary *dict = [NSDictionary
-                              dictionaryWithObjectsAndKeys:
-                              module,@"module",screen,@"screen",nil];
+        NSArray *array = [[modules allKeys] sortedArrayUsingSelector:@selector(compare:)];
+        NSString *module = [array objectAtIndex:row];
+        NSNumber *screenId = [[screen deviceDescription] objectForKey:@"NSScreenNumber"];
+        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+        [dict setObject:module forKey:@"module"];
+        [dict setObject:screenId forKey:@"screen"];
+        
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        module = [[modules allKeys] objectAtIndex: row];
-        [defaults setObject: module forKey: @"currentModule"];
+        NSString *defaultsString = [NSString stringWithFormat:@"currentModule_%@",screenId];
+        [defaults setObject: module forKey: defaultsString];
         
         [[NSNotificationCenter defaultCenter]
          postNotificationName:@"ISSelectSaverForScreeNotification"
@@ -80,6 +92,7 @@
     }
 }
 
+/*
 - (void) inBackground: (id)sender
 {
     isInBackground = ([inBackground state] == NSOnState);
@@ -99,6 +112,7 @@
 {
     [parentController startSaver];
 }
+*/
 
 - (void)startModule: (NSNotification *)notification
 {
@@ -122,8 +136,10 @@
 
 - (void) loadDefaults
 {
+    NSNumber *screenId = [[screen deviceDescription] objectForKey:@"NSScreenNumber"];
+    NSString *screenKey = [NSString stringWithFormat:@"currentModule_%@",screenId];
     NSMutableDictionary *appDefs = [NSDictionary dictionaryWithObjectsAndKeys:
-                                    @"Polyhedra",@"currentModule_0",nil];
+                                    @"Polyhedra",screenKey,nil];
     NSInteger row = 0;
     float runSpeed = 0.10;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -131,22 +147,22 @@
     
     [defaults setFloat: runSpeed forKey: @"runSpeed"];
     defaults = [NSUserDefaults standardUserDefaults];
-    [defaults registerDefaults: appDefs];
-    
-    NSNumber *screenId = [[screen deviceDescription] objectForKey:@"NSScreenNumber"];
-    NSString *screenKey = [NSString stringWithFormat:@"currentModule_%@",screenId];
+    [defaults registerDefaults: appDefs];    
+
     currentModuleName = [defaults stringForKey: screenKey];
-    
     if(currentModuleName == nil || [currentModuleName isEqualToString:@""])
     {
         currentModuleName = @"Polyhedra"; // default...
     }
     
-    row = [[modules allKeys] indexOfObject: currentModuleName];
+    NSArray *array = [[modules allKeys] sortedArrayUsingSelector:@selector(compare:)];
+    row = [array indexOfObject: currentModuleName];
     if(row < [[modules allKeys] count])
     {
-        [moduleList reloadColumn: 0];
-        [moduleList selectRow: row inColumn: 0];
+        NSIndexSet *rowIndex = [NSIndexSet indexSetWithIndex:row];
+        [moduleList reloadData];
+        [moduleList selectRowIndexes:rowIndex byExtendingSelection:NO];
+        [moduleList scrollRowToVisible:row + 2];
     }
     
     NSLog(@"current module = %@",currentModuleName);
@@ -163,64 +179,22 @@
 }
 @end
 
-// delegate
-@interface PreferencesPanelController (BrowserDelegate)
-- (BOOL) browser: (NSBrowser*)sender selectRow: (int)row inColumn: (int)column;
-
-- (void) browser: (NSBrowser *)sender createRowsForColumn: (int)column
-        inMatrix: (NSMatrix *)matrix;
-
-- (NSString*) browser: (NSBrowser*)sender titleOfColumn: (int)column;
-
-- (void) browser: (NSBrowser *)sender
- willDisplayCell: (id)cell
-           atRow: (int)row
-          column: (int)column;
-
-- (BOOL) browser: (NSBrowser *)sender isColumnValid: (int)column;
-@end
-
-@implementation PreferencesPanelController (BrowserDelegate)
-- (BOOL) browser: (NSBrowser*)sender selectRow: (int)row inColumn: (int)column
+@implementation PreferencesPanelController (TableDelegateDataSource)
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
 {
-    return YES;
+    return [[[parentController modules] allKeys] count];
 }
 
-- (void) browser: (NSBrowser *)sender createRowsForColumn: (int)column
-        inMatrix: (NSMatrix *)matrix
+- (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
 {
     NSArray *array = [[[parentController modules] allKeys] sortedArrayUsingSelector:@selector(compare:)];
-    NSEnumerator     *e = [array objectEnumerator];
-    NSString    *module = nil;
-    NSBrowserCell *cell = nil;
-    int i = 0;
-    
-    while((module = [e nextObject]) != nil)
-    {
-        [matrix insertRow: i withCells: nil];
-        cell = [matrix cellAtRow: i column: 0];
-        [cell setLeaf: YES];
-        i++;
-        [cell setStringValue: module];
-    }
+    return [array objectAtIndex:rowIndex];
 }
 
-- (NSString*) browser: (NSBrowser*)sender titleOfColumn: (int)column
+- (void)tableView:(NSTableView *)tableView didClickTableColumn:(NSTableColumn *)tableColumn
 {
-    NSLog(@"Delegate called....");
-    return @"Modules";
-}
-
-- (void) browser: (NSBrowser *)sender
- willDisplayCell: (id)cell
-           atRow: (int)row
-          column: (int)column
-{
-}
-
-- (BOOL) browser: (NSBrowser *)sender isColumnValid: (int)column
-{
-    return NO;
+    NSUInteger clickedRow = [tableView clickedRow];
+    NSLog(@"%ld",(unsigned long)clickedRow);
 }
 @end
 

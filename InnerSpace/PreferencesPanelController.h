@@ -10,16 +10,16 @@
 
 @class InnerSpaceController;
 
-@interface PreferencesPanelController : NSObject
+@interface PreferencesPanelController : NSObject <NSTableViewDataSource, NSTableViewDelegate>
 {
     // interface vars.
-    IBOutlet id moduleList;
+    IBOutlet NSTableView *moduleList;
     IBOutlet id inBackground;
-    IBOutlet id locker;
-    IBOutlet id saver;
-    IBOutlet id run;
+    // IBOutlet id locker;
+    // IBOutlet id saver;
+    // IBOutlet id run;
     IBOutlet id controlsView;
-    IBOutlet id lockerPanel;
+    // IBOutlet id lockerPanel;
     IBOutlet id speedSlider;
     IBOutlet NSWindow *window;    
     IBOutlet id emptyView;
@@ -35,12 +35,16 @@
     InnerSpaceController *parentController;
 }
 
+- (id)initForScreen:(NSScreen *)screen;
+
 // methods called from interface
 - (IBAction) selectSaver: (id)sender;
+/*
 - (IBAction) inBackground: (id)sender;
 - (IBAction) locker: (id)sender;
 - (IBAction) saver: (id)sender;
 - (IBAction) doSaver: (id)sender;
+*/
 
 // Load & Find modules...
 - (void) loadDefaults;

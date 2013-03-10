@@ -61,12 +61,30 @@ void DisplayReconfigurationCallBack (CGDirectDisplayID display,
     return self;
 }
 
+- (NSScreen *)screenForId:(NSNumber *)screenId
+{
+    NSScreen *result = [NSScreen mainScreen];
+    for(NSScreen *screen in [NSScreen screens])
+    {
+        NSNumber *sid = [[screen deviceDescription] objectForKey:@"NSScreenNumber"];
+        if([sid isEqualToNumber:screenId])
+        {
+            result = screen;
+            break;
+        }
+    }
+    return result;
+}
+
 - (void) handleNotification: (NSNotification *)notification
 {
-    NSDictionary *dict = [notification object];
-    NSScreen *screen = [dict objectForKey:@"screen"];
+    NSDictionary *dict = [notification userInfo];
+    NSNumber *screenId = [dict objectForKey:@"screen"];
     NSString *moduleName = [dict objectForKey:@"module"];
-    [self loadModule:moduleName forScreen:screen];    
+    NSScreen *screen = [self screenForId:screenId];
+
+    [self destroySaverWindowOnScreen:screen];
+    [self createSaverWindow:YES forScreen:screen withModuleNamed:moduleName];
 }
 
 - (void) resetTimer:(id)module
@@ -105,127 +123,150 @@ void DisplayReconfigurationCallBack (CGDirectDisplayID display,
     [self doSaverInBackground:self];
 }
 
+- (void) createSaverWindow:(BOOL)desktop
+                 forScreen:(NSScreen *)screen
+           withModuleNamed:(NSString *)currentModuleName
+{
+    SaverWindow *saverWindow = nil;
+    NSRect frame = [screen frame];
+    int store = NSBackingStoreRetained;
+    
+    // If current module is nil or blank, use the default...
+    if(currentModuleName == nil || [currentModuleName isEqualToString:@""])
+    {
+        currentModuleName = @"Polyhedra"; // default...
+    }
+    id currentModule = [self loadModule:currentModuleName
+                              forScreen:screen];
+    
+    // if we can't load the module, just abort...
+    if(nil == currentModule)
+    {
+        NSLog(@"Unable to load module.");
+        return;
+    }
+    
+    // If successful, write to defaults...
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSNumber *screenId = [[screen deviceDescription] objectForKey:@"NSScreenNumber"];
+    NSString *screenKey = [NSString stringWithFormat:@"currentModule_%@",screenId];
+    [defaults setObject:currentModuleName forKey:screenKey];
+    [defaults synchronize];
+    
+    // determine backing type...
+    NS_DURING
+    {
+        if([currentModule respondsToSelector: @selector(useBufferedWindow)])
+        {
+            if([currentModule useBufferedWindow])
+            {
+                store = NSBackingStoreBuffered;
+            }
+        }
+    }
+    NS_HANDLER
+    {
+        NSLog(@"EXCEPTION: %@",localException);
+        store = NSBackingStoreBuffered;
+    }
+    NS_ENDHANDLER;
+    
+    // create the window...
+    saverWindow = [[SaverWindow alloc] initWithContentRect: frame
+                                                 styleMask: NSBorderlessWindowMask
+                                                   backing: store
+                                                     defer: NO];
+    
+    // Make sure we stay on all desktops...
+    [saverWindow setCollectionBehavior:NSWindowCollectionBehaviorCanJoinAllSpaces];
+    
+    // set some attributes...
+    [saverWindow setAction: @selector(stopAndStartSaver) forTarget: self];
+    [saverWindow setAutodisplay: YES];
+    [saverWindow makeFirstResponder: saverWindow];
+    [saverWindow setExcludedFromWindowsMenu: YES];
+    [saverWindow setBackgroundColor: [NSColor blackColor]];
+    [saverWindow setOneShot:YES];
+    
+    // set up the backing store...
+    if(store == NSBackingStoreBuffered)
+    {
+        [saverWindow useOptimizedDrawing: YES];
+        [saverWindow setDynamicDepthLimit: YES];
+    }
+    
+    // run the saver in on the desktop...
+    if(desktop)
+    {
+        [saverWindow setLevel: NSDesktopWindowLevel];
+        [saverWindow setCanHide: NO];
+    }
+    else
+    {
+        [saverWindow setLevel: NSScreenSaverWindowLevel];
+        [saverWindow setCanHide: YES];
+    }
+    
+    // load the view from the currently active module, if
+    // there is one...
+    if(currentModule)
+    {
+        [saverWindow setContentView: currentModule];
+        NS_DURING
+        {
+            if([currentModule respondsToSelector: @selector(willEnterScreenSaverMode)])
+            {
+                [currentModule willEnterScreenSaverMode];
+            }
+        }
+        NS_HANDLER
+        {
+            NSLog(@"EXCEPTION while creating saver window %@",localException);
+        }
+        NS_ENDHANDLER
+    }
+    
+    NSMapInsert(screensToWindows, screen, saverWindow);
+    
+    [self startTimer:currentModule];
+    [saverWindow makeKeyWindow];
+    [saverWindow orderBack:self];    
+}
+
 - (void) createSaverWindow: (BOOL)desktop
 {
     NSArray *screens = [NSScreen screens];
     NSEnumerator *en = [screens objectEnumerator];
     NSScreen *screen = nil;
-    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
     while(nil != (screen = [en nextObject]))
     {
-        SaverWindow *saverWindow = nil;
-        NSRect frame = [screen frame];
-        int store = NSBackingStoreRetained;
-                
-        // return if nil...
         NSNumber *screenId = [[screen deviceDescription] objectForKey:@"NSScreenNumber"];
         NSString *screenKey = [NSString stringWithFormat:@"currentModule_%@",screenId];
         NSString *currentModuleName = [defaults stringForKey: screenKey];
         
-        if(currentModuleName == nil || [currentModuleName isEqualToString:@""])
-        {
-            currentModuleName = @"Polyhedra"; // default...
-        }
-        id currentModule = [self loadModule:currentModuleName
-                                  forScreen:screen];
-        if(nil == currentModule)
-        {
-            return;
-        }
-        
-        // determine backing type...
-        NS_DURING
-        {
-            if([currentModule respondsToSelector: @selector(useBufferedWindow)])
-            {
-                if([currentModule useBufferedWindow])
-                {
-                    store = NSBackingStoreBuffered;
-                }
-            }
-        }
-        NS_HANDLER
-        {
-            NSLog(@"EXCEPTION: %@",localException);
-            store = NSBackingStoreBuffered;
-        }
-        NS_ENDHANDLER;
-        
-        // create the window...
-        saverWindow = [[SaverWindow alloc] initWithContentRect: frame
-                                                     styleMask: NSBorderlessWindowMask
-                                                       backing: store
-                                                         defer: NO];
-        
-        // Make sure we stay on all desktops...
-        [saverWindow setCollectionBehavior:NSWindowCollectionBehaviorCanJoinAllSpaces];
-        
-        // set some attributes...
-        [saverWindow setAction: @selector(stopAndStartSaver) forTarget: self];
-        [saverWindow setAutodisplay: YES];
-        [saverWindow makeFirstResponder: saverWindow];
-        [saverWindow setExcludedFromWindowsMenu: YES];
-        [saverWindow setBackgroundColor: [NSColor blackColor]];
-        [saverWindow setOneShot:YES];
-        
-        // set up the backing store...
-        if(store == NSBackingStoreBuffered)
-        {
-            [saverWindow useOptimizedDrawing: YES];
-            [saverWindow setDynamicDepthLimit: YES];
-        }
-        
-        // run the saver in on the desktop...
-        if(desktop)
-        {
-            [saverWindow setLevel: NSDesktopWindowLevel];
-            [saverWindow setCanHide: NO];
-        }
-        else
-        {
-            [saverWindow setLevel: NSScreenSaverWindowLevel];
-            [saverWindow setCanHide: YES];
-        }
-        
-        // load the view from the currently active module, if
-        // there is one...
-        if(currentModule)
-        {
-            [saverWindow setContentView: currentModule];
-            NS_DURING
-            {
-                if([currentModule respondsToSelector: @selector(willEnterScreenSaverMode)])
-                {
-                    [currentModule willEnterScreenSaverMode];
-                }
-            }
-            NS_HANDLER
-            {
-                NSLog(@"EXCEPTION while creating saver window %@",localException);
-            }
-            NS_ENDHANDLER
-        }
-        
-        NSMapInsert(screensToWindows, screen, saverWindow);
-
-        [self startTimer:currentModule];
-        [saverWindow makeKeyWindow];
-        [saverWindow orderBack:self];
+        [self createSaverWindow:desktop forScreen:screen withModuleNamed:currentModuleName];
     }
+}
+
+- (void) destroySaverWindowOnScreen:(NSScreen *)screen
+{
+    SaverWindow *saverWindow = NSMapGet(screensToWindows,screen);
+    [self stopTimer:[saverWindow contentView]];
+    [saverWindow close];
+    [screensToWindows removeObjectForKey:screen];
 }
 
 - (void) destroySaverWindow
 {
     NSArray *keyArray = [NSAllMapTableKeys(screensToWindows) copy];
     NSEnumerator *en = [keyArray objectEnumerator];
-    NSDictionary *key = nil;
+    id key = nil;
     
     while(nil != (key = [en nextObject]))
     {
-        SaverWindow *saverWindow = NSMapGet(screensToWindows,key);
-        [self stopTimer:[saverWindow contentView]];
-        [saverWindow close];
-        [screensToWindows removeObjectForKey:key];
+        [self destroySaverWindowOnScreen:key];
     }
 }
 
@@ -516,7 +557,8 @@ void DisplayReconfigurationCallBack (CGDirectDisplayID display,
 
     for(NSScreen *screen in screens)
     {
-        PreferencesPanelController *controller = [[PreferencesPanelController alloc] init];
+        PreferencesPanelController *controller = [[PreferencesPanelController alloc]
+                                                  initForScreen:screen];
         
         [controller setParentController:self];
         
@@ -527,9 +569,9 @@ void DisplayReconfigurationCallBack (CGDirectDisplayID display,
     }
 }
 
-- (void) closeAllPreferencesPanels
+- (void) closePreferencePanel:(PreferencesPanelController *)controller
 {
-    [controllers removeAllObjects];
+    [controllers removeObject:controller];
 }
 
 @end
