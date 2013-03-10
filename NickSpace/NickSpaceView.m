@@ -552,7 +552,7 @@ void doSeg(float x1, float y1, float x2, float y2)
 	  tcRatio = [userDef floatForKey: @"tcRatio"];
 	  tlRatio = [userDef floatForKey: @"tlRatio"];
 	  numColors = (int)[userDef integerForKey: @"numColors"];
-	  colors = [[NSMutableArray alloc] initWithArray: [[userDef arrayForKey: @"colors"] autorelease]];
+	  colors = [[NSMutableArray alloc] initWithArray: [userDef arrayForKey: @"colors"]];
 	  currColor = 0;
 	}
       

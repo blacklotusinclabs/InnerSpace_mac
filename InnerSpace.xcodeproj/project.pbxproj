@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1402401616EC14A3005BDB19 /* InnerSpace_Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1402401516EC14A3005BDB19 /* InnerSpace_Icon.icns */; };
 		140964C516DDD6560046127D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A327B4145C6F7D00BD4F94 /* Cocoa.framework */; };
 		140964CB16DDD6560046127D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 140964C916DDD6560046127D /* InfoPlist.strings */; };
 		140964D216DDD68F0046127D /* BlackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140964D116DDD68F0046127D /* BlackView.m */; };
@@ -183,6 +184,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1402401516EC14A3005BDB19 /* InnerSpace_Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = InnerSpace_Icon.icns; path = InnerSpace/InnerSpace_Icon.icns; sourceTree = "<group>"; };
 		140964C416DDD6560046127D /* Black.InnerSpace */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Black.InnerSpace; sourceTree = BUILT_PRODUCTS_DIR; };
 		140964C816DDD6560046127D /* Black-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Black-Info.plist"; sourceTree = "<group>"; };
 		140964CA16DDD6560046127D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 		1409651416DEA8A60046127D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1402401516EC14A3005BDB19 /* InnerSpace_Icon.icns */,
 				14A327C9145C6F7E00BD4F94 /* MainMenu.xib */,
 				1409650F16DE846F0046127D /* PreferencesPanel.xib */,
 			);
@@ -996,6 +999,7 @@
 				14A327C5145C6F7D00BD4F94 /* Credits.rtf in Resources */,
 				14A327CB145C6F7E00BD4F94 /* MainMenu.xib in Resources */,
 				1409651016DE846F0046127D /* PreferencesPanel.xib in Resources */,
+				1402401616EC14A3005BDB19 /* InnerSpace_Icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1710,6 +1714,7 @@
 				1489D41116E3E97A0079FC70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1489D43716E3F0610079FC70 /* Build configuration list for PBXNativeTarget "ItJustStopped" */ = {
 			isa = XCConfigurationList;
@@ -1718,6 +1723,7 @@
 				1489D43916E3F0610079FC70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1489D45116E3F33B0079FC70 /* Build configuration list for PBXNativeTarget "Boxes" */ = {
 			isa = XCConfigurationList;
@@ -1726,6 +1732,7 @@
 				1489D45316E3F33B0079FC70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1489D46A16E3F97B0079FC70 /* Build configuration list for PBXNativeTarget "NickSpace" */ = {
 			isa = XCConfigurationList;
@@ -1734,6 +1741,7 @@
 				1489D46C16E3F97B0079FC70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1489D49416E41D470079FC70 /* Build configuration list for PBXNativeTarget "Qix" */ = {
 			isa = XCConfigurationList;
@@ -1742,6 +1750,7 @@
 				1489D49616E41D470079FC70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14A327AA145C6F7D00BD4F94 /* Build configuration list for PBXProject "InnerSpace" */ = {
 			isa = XCConfigurationList;

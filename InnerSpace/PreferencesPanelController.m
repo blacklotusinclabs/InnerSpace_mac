@@ -162,7 +162,7 @@
         NSIndexSet *rowIndex = [NSIndexSet indexSetWithIndex:row];
         [moduleList reloadData];
         [moduleList selectRowIndexes:rowIndex byExtendingSelection:NO];
-        [moduleList scrollRowToVisible:row + 2];
+        [moduleList scrollRowToVisible:row]; // + 2];
     }
     
     NSLog(@"current module = %@",currentModuleName);

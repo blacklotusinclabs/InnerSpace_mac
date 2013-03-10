@@ -151,7 +151,6 @@ void DisplayReconfigurationCallBack (CGDirectDisplayID display,
     NSNumber *screenId = [[screen deviceDescription] objectForKey:@"NSScreenNumber"];
     NSString *screenKey = [NSString stringWithFormat:@"currentModule_%@",screenId];
     [defaults setObject:currentModuleName forKey:screenKey];
-    [defaults synchronize];
     
     // determine backing type...
     NS_DURING
@@ -574,5 +573,9 @@ void DisplayReconfigurationCallBack (CGDirectDisplayID display,
     [controllers removeObject:controller];
 }
 
+- (void)applicationWillTerminate:(NSNotification *)aNotification
+{
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
 @end
 
