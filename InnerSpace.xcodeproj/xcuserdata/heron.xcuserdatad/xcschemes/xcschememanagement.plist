@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
+		<key>CPUMonitor.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
 		<key>InnerSpace.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -42,7 +47,7 @@
 		<key>Qix.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>10</integer>
+			<integer>9</integer>
 		</dict>
 		<key>Space.xcscheme</key>
 		<dict>
@@ -123,6 +128,11 @@
 			<true/>
 		</dict>
 		<key>1489D48A16E41D470079FC70</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>14A055AF16EEDE7E00352C72</key>
 		<dict>
 			<key>primary</key>
 			<true/>

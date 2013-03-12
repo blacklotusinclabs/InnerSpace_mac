@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'CPUMonitor' target in the 'CPUMonitor' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

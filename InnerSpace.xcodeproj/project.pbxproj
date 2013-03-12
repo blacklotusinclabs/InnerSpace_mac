@@ -61,6 +61,14 @@
 		1489D4A016E41E7C0079FC70 /* Qix.InnerSpace in Resources */ = {isa = PBXBuildFile; fileRef = 1489D48B16E41D470079FC70 /* Qix.InnerSpace */; };
 		149233601503A06000245B25 /* InnerSpaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1492335C1503A06000245B25 /* InnerSpaceController.m */; };
 		149233611503A06000245B25 /* SaverWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1492335F1503A06000245B25 /* SaverWindow.m */; };
+		14A055B116EEDE7E00352C72 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A327B4145C6F7D00BD4F94 /* Cocoa.framework */; };
+		14A055B716EEDE7E00352C72 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14A055B516EEDE7E00352C72 /* InfoPlist.strings */; };
+		14A055BC16EEDED200352C72 /* CPUMonitor.InnerSpace in Resources */ = {isa = PBXBuildFile; fileRef = 14A055B016EEDE7E00352C72 /* CPUMonitor.InnerSpace */; };
+		14A055C316EEE22100352C72 /* NSColorExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A055C216EEE22100352C72 /* NSColorExtensions.m */; };
+		14A055C716EEE27800352C72 /* loadave.c in Sources */ = {isa = PBXBuildFile; fileRef = 14A055C416EEE27800352C72 /* loadave.c */; };
+		14A055CE16EEE2D200352C72 /* Percentages.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A055C916EEE2D100352C72 /* Percentages.m */; };
+		14A055CF16EEE2D200352C72 /* TimeMonColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A055CB16EEE2D100352C72 /* TimeMonColors.m */; };
+		14A055D016EEE2D200352C72 /* TimeMonWraps.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A055CD16EEE2D200352C72 /* TimeMonWraps.m */; };
 		14A327B5145C6F7D00BD4F94 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A327B4145C6F7D00BD4F94 /* Cocoa.framework */; };
 		14A327BF145C6F7D00BD4F94 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14A327BD145C6F7D00BD4F94 /* InfoPlist.strings */; };
 		14A327C1145C6F7D00BD4F94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A327C0145C6F7D00BD4F94 /* main.m */; };
@@ -181,6 +189,13 @@
 			remoteGlobalIDString = 1489D48A16E41D470079FC70;
 			remoteInfo = Qix;
 		};
+		14A055BD16EEDEE800352C72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A327A7145C6F7D00BD4F94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14A055AF16EEDE7E00352C72;
+			remoteInfo = CPUMonitor;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -255,6 +270,20 @@
 		1492335D1503A06000245B25 /* ModuleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleView.h; sourceTree = "<group>"; };
 		1492335E1503A06000245B25 /* SaverWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaverWindow.h; sourceTree = "<group>"; };
 		1492335F1503A06000245B25 /* SaverWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaverWindow.m; sourceTree = "<group>"; };
+		14A055B016EEDE7E00352C72 /* CPUMonitor.InnerSpace */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CPUMonitor.InnerSpace; sourceTree = BUILT_PRODUCTS_DIR; };
+		14A055B416EEDE7E00352C72 /* CPUMonitor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CPUMonitor-Info.plist"; sourceTree = "<group>"; };
+		14A055B616EEDE7E00352C72 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		14A055B816EEDE7E00352C72 /* CPUMonitor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPUMonitor-Prefix.pch"; sourceTree = "<group>"; };
+		14A055C216EEE22100352C72 /* NSColorExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSColorExtensions.m; sourceTree = "<group>"; };
+		14A055C416EEE27800352C72 /* loadave.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = loadave.c; sourceTree = "<group>"; };
+		14A055C516EEE27800352C72 /* loadave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loadave.h; sourceTree = "<group>"; };
+		14A055C616EEE27800352C72 /* NSColorExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSColorExtensions.h; sourceTree = "<group>"; };
+		14A055C816EEE2D100352C72 /* Percentages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Percentages.h; sourceTree = "<group>"; };
+		14A055C916EEE2D100352C72 /* Percentages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Percentages.m; sourceTree = "<group>"; };
+		14A055CA16EEE2D100352C72 /* TimeMonColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeMonColors.h; sourceTree = "<group>"; };
+		14A055CB16EEE2D100352C72 /* TimeMonColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeMonColors.m; sourceTree = "<group>"; };
+		14A055CC16EEE2D100352C72 /* TimeMonWraps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeMonWraps.h; sourceTree = "<group>"; };
+		14A055CD16EEE2D200352C72 /* TimeMonWraps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeMonWraps.m; sourceTree = "<group>"; };
 		14A327B0145C6F7D00BD4F94 /* InnerSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InnerSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14A327B4145C6F7D00BD4F94 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		14A327B7145C6F7D00BD4F94 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -351,6 +380,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		14A055AD16EEDE7E00352C72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A055B116EEDE7E00352C72 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		14A327AD145C6F7D00BD4F94 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -366,6 +403,7 @@
 		140964AD16DDD5C80046127D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				14A055B216EEDE7E00352C72 /* CPUMonitor */,
 				1489D48D16E41D470079FC70 /* Qix */,
 				1489D46316E3F97A0079FC70 /* NickSpace */,
 				1489D44A16E3F33B0079FC70 /* Boxes */,
@@ -602,6 +640,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		14A055B216EEDE7E00352C72 /* CPUMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				14A055C816EEE2D100352C72 /* Percentages.h */,
+				14A055C916EEE2D100352C72 /* Percentages.m */,
+				14A055CA16EEE2D100352C72 /* TimeMonColors.h */,
+				14A055CB16EEE2D100352C72 /* TimeMonColors.m */,
+				14A055CC16EEE2D100352C72 /* TimeMonWraps.h */,
+				14A055CD16EEE2D200352C72 /* TimeMonWraps.m */,
+				14A055C416EEE27800352C72 /* loadave.c */,
+				14A055C516EEE27800352C72 /* loadave.h */,
+				14A055C616EEE27800352C72 /* NSColorExtensions.h */,
+				14A055C216EEE22100352C72 /* NSColorExtensions.m */,
+				14A055B316EEDE7E00352C72 /* Supporting Files */,
+			);
+			path = CPUMonitor;
+			sourceTree = "<group>";
+		};
+		14A055B316EEDE7E00352C72 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14A055B416EEDE7E00352C72 /* CPUMonitor-Info.plist */,
+				14A055B516EEDE7E00352C72 /* InfoPlist.strings */,
+				14A055B816EEDE7E00352C72 /* CPUMonitor-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		14A327A5145C6F7D00BD4F94 = {
 			isa = PBXGroup;
 			children = (
@@ -627,6 +693,7 @@
 				1489D44816E3F33B0079FC70 /* Boxes.InnerSpace */,
 				1489D46116E3F97A0079FC70 /* NickSpace.InnerSpace */,
 				1489D48B16E41D470079FC70 /* Qix.InnerSpace */,
+				14A055B016EEDE7E00352C72 /* CPUMonitor.InnerSpace */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -847,6 +914,23 @@
 			productReference = 1489D48B16E41D470079FC70 /* Qix.InnerSpace */;
 			productType = "com.apple.product-type.bundle";
 		};
+		14A055AF16EEDE7E00352C72 /* CPUMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14A055BB16EEDE7E00352C72 /* Build configuration list for PBXNativeTarget "CPUMonitor" */;
+			buildPhases = (
+				14A055AC16EEDE7E00352C72 /* Sources */,
+				14A055AD16EEDE7E00352C72 /* Frameworks */,
+				14A055AE16EEDE7E00352C72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CPUMonitor;
+			productName = CPUMonitor;
+			productReference = 14A055B016EEDE7E00352C72 /* CPUMonitor.InnerSpace */;
+			productType = "com.apple.product-type.bundle";
+		};
 		14A327AF145C6F7D00BD4F94 /* InnerSpace */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14A327CE145C6F7E00BD4F94 /* Build configuration list for PBXNativeTarget "InnerSpace" */;
@@ -858,12 +942,13 @@
 			buildRules = (
 			);
 			dependencies = (
+				1409650D16DDE13D0046127D /* PBXTargetDependency */,
+				14A055BE16EEDEE800352C72 /* PBXTargetDependency */,
 				1489D49B16E41D8E0079FC70 /* PBXTargetDependency */,
 				1489D47416E3F9C80079FC70 /* PBXTargetDependency */,
 				1489D45A16E3F3960079FC70 /* PBXTargetDependency */,
 				1489D44116E3F0D00079FC70 /* PBXTargetDependency */,
 				1489D42216E3EA280079FC70 /* PBXTargetDependency */,
-				1409650D16DDE13D0046127D /* PBXTargetDependency */,
 				1409650B16DDE1380046127D /* PBXTargetDependency */,
 				140964ED16DDD7D60046127D /* PBXTargetDependency */,
 				140964EF16DDD7D60046127D /* PBXTargetDependency */,
@@ -905,6 +990,7 @@
 				1489D44716E3F33B0079FC70 /* Boxes */,
 				1489D46016E3F97A0079FC70 /* NickSpace */,
 				1489D48A16E41D470079FC70 /* Qix */,
+				14A055AF16EEDE7E00352C72 /* CPUMonitor */,
 			);
 		};
 /* End PBXProject section */
@@ -982,10 +1068,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		14A055AE16EEDE7E00352C72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A055B716EEDE7E00352C72 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		14A327AE145C6F7D00BD4F94 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A055BC16EEDED200352C72 /* CPUMonitor.InnerSpace in Resources */,
 				1489D4A016E41E7C0079FC70 /* Qix.InnerSpace in Resources */,
 				1489D47516E3F9D10079FC70 /* NickSpace.InnerSpace in Resources */,
 				1489D45B16E3F39F0079FC70 /* Boxes.InnerSpace in Resources */,
@@ -1079,6 +1174,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				1489D49F16E41E440079FC70 /* QixView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14A055AC16EEDE7E00352C72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A055C316EEE22100352C72 /* NSColorExtensions.m in Sources */,
+				14A055C716EEE27800352C72 /* loadave.c in Sources */,
+				14A055CE16EEE2D200352C72 /* Percentages.m in Sources */,
+				14A055CF16EEE2D200352C72 /* TimeMonColors.m in Sources */,
+				14A055D016EEE2D200352C72 /* TimeMonWraps.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1176,6 +1283,11 @@
 			target = 1489D48A16E41D470079FC70 /* Qix */;
 			targetProxy = 1489D49A16E41D8E0079FC70 /* PBXContainerItemProxy */;
 		};
+		14A055BE16EEDEE800352C72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14A055AF16EEDE7E00352C72 /* CPUMonitor */;
+			targetProxy = 14A055BD16EEDEE800352C72 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1247,6 +1359,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				1489D49116E41D470079FC70 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		14A055B516EEDE7E00352C72 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14A055B616EEDE7E00352C72 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1589,6 +1709,40 @@
 			};
 			name = Release;
 		};
+		14A055B916EEDE7E00352C72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CPUMonitor/CPUMonitor-Prefix.pch";
+				INFOPLIST_FILE = "CPUMonitor/CPUMonitor-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = InnerSpace;
+			};
+			name = Debug;
+		};
+		14A055BA16EEDE7E00352C72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CPUMonitor/CPUMonitor-Prefix.pch";
+				INFOPLIST_FILE = "CPUMonitor/CPUMonitor-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = InnerSpace;
+			};
+			name = Release;
+		};
 		14A327CC145C6F7E00BD4F94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1751,6 +1905,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		14A055BB16EEDE7E00352C72 /* Build configuration list for PBXNativeTarget "CPUMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14A055B916EEDE7E00352C72 /* Debug */,
+				14A055BA16EEDE7E00352C72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		14A327AA145C6F7D00BD4F94 /* Build configuration list for PBXProject "InnerSpace" */ = {
 			isa = XCConfigurationList;

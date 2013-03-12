@@ -17,8 +17,8 @@
 //
 - (void)drawRect:(NSRect)rects
 {
-  [[NSColor blackColor] set];
-  NSRectFill(rects);
+  //[[NSColor blackColor] set];
+  // NSRectFill(rects);
 }
 
 - (void)oneStep
@@ -44,6 +44,7 @@
   rect = NSMakeRect(x,y,w,h);
   [[NSColor colorWithCalibratedRed: r green: g blue: b alpha: a] set];
   NSRectFill(rect);
+    // [self setNeedsDisplay:YES];
 }
 @end
 
