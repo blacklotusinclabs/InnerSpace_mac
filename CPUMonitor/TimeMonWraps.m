@@ -7,11 +7,11 @@
 
 #import "TimeMonWraps.h"
 
-void drawArc2(double radius, double bdeg, double ddeg, double ldeg,
+void drawArc2(double radius, float height, float width, double bdeg, double ddeg, double ldeg,
 	      double mdeg)
 {
   NSBezierPath *bp = nil;
-  NSPoint point = NSMakePoint(24,24);
+  NSPoint point = NSMakePoint(width/2,height/2);
   NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
   NSColor *idleColor = [NSColor colorFromStringRepresentation: 
 				  [defaults stringForKey: @"IdleColor"]];

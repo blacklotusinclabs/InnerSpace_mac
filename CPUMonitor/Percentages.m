@@ -40,39 +40,62 @@
 
 -(void) drawImageRep
 {
-  int i;
-  static float radii[3]={ 23.0, 17.0, 11.0};
-  NSPoint point = NSMakePoint(24,24);
-  NSBezierPath *bp = [NSBezierPath bezierPath];
-  NSPoint outer = NSMakePoint(47.5, 24.0);
-  NSPoint middle = NSMakePoint(41.5, 24.0);
-  NSPoint inner = NSMakePoint(35.5, 24.0);
-  NSPoint lineEnd = NSMakePoint(24.0, 48.0);
+    int i;
+    NSSize size = [self frame].size;
+    double radii[3]; //={ 23.0, 17.0, 11.0};
 
-  for(i = 0; i < 3; i++) 
+    radii[0] = (double)(0.500)*(double)size.height;
+    radii[1] = (double)(0.375)*(double)size.height;
+    radii[2] = (double)(0.250)*(double)size.height;
+
+    NSPoint point = NSMakePoint(size.width/2,size.height/2);
+    NSBezierPath *bp = [NSBezierPath bezierPath];
+    NSPoint outer = NSMakePoint((size.height * 0.5) + radii[2] + 0.5, size.height/2);
+    NSPoint middle = NSMakePoint((size.height * 0.5) + radii[1] + 0.5, size.height/2);
+    NSPoint inner = NSMakePoint((size.height * 0.5) + radii[2] + 0.5, size.height/2); //24.0);
+    NSPoint lineEnd = NSMakePoint(size.height * 0.5, size.height);// 24.0, 48.0);
+
+    radii[0] = (double)(0.500)*(double)size.height;
+    radii[1] = (double)(0.375)*(double)size.height;
+    radii[2] = (double)(0.250)*(double)size.height;
+        
+    for(i = 0; i < 3; i++)
     {
-      // Store away the values we redraw.
-      bcopy(pcents[i], lpcents[i], sizeof(lpcents[i])); 
-      drawArc2(radii[i],
-	       90 - (pcents[i][0]) * 360,
-	       90 - (pcents[i][0] + pcents[i][1]) * 360,
-	       90 - (pcents[i][0] + pcents[i][1] + pcents[i][2]) * 360,
-	       90 - (pcents[i][0] + pcents[i][1] + pcents[i][2] + pcents[i][3]) * 360);
+        // Store away the values we redraw.
+        bcopy(pcents[i], lpcents[i], sizeof(lpcents[i]));
+        drawArc2(radii[i], size.height, size.width,
+                 90 - (pcents[i][0]) * 360,
+                 90 - (pcents[i][0] + pcents[i][1]) * 360,
+                 90 - (pcents[i][0] + pcents[i][1] + pcents[i][2]) * 360,
+                 90 - (pcents[i][0] + pcents[i][1] + pcents[i][2] + pcents[i][3]) * 360);
     }
-  
-  [[NSColor blackColor] set];
-  [bp moveToPoint: outer];
-  [bp appendBezierPathWithArcWithCenter: point radius: 23.5 startAngle: 0 endAngle: 360 clockwise: NO];
-
-  [bp moveToPoint: middle];
-  [bp appendBezierPathWithArcWithCenter: point radius: 17.5 startAngle: 0 endAngle: 360 clockwise: NO];
-
-  [bp moveToPoint: inner];
-  [bp appendBezierPathWithArcWithCenter: point radius: 11.5 startAngle: 0 endAngle: 360 clockwise: NO];
-
-  [bp moveToPoint: point];
-  [bp lineToPoint: lineEnd];
-  [bp stroke];
+    
+    [bp setLineWidth:20.0];
+    [[NSColor grayColor] set];
+    [bp moveToPoint: outer];
+    [bp appendBezierPathWithArcWithCenter: point
+                                   radius: radii[0]+0.5
+                               startAngle: 0
+                                 endAngle: 360
+                                clockwise: NO];
+    
+    [bp moveToPoint: middle];
+    [bp appendBezierPathWithArcWithCenter: point
+                                   radius: radii[1]+0.5
+                               startAngle: 0
+                                 endAngle: 360
+                                clockwise: NO];
+    
+    [bp moveToPoint: inner];
+    [bp appendBezierPathWithArcWithCenter: point
+                                   radius: radii[2]+0.5
+                               startAngle: 0
+                                 endAngle: 360
+                                clockwise: NO];
+    
+    [bp moveToPoint: point];
+    [bp lineToPoint: lineEnd];
+    [bp stroke];
 }
 
 /*
@@ -202,10 +225,6 @@
     }
 }
 
-- (void)applicationWillFinishLaunching:(NSNotification *)notification
-{
-}
-
 // Resize the oldTimes array and rearrange the values within
 // so that as many as possible are retained, but no bad values
 // are introduced.
@@ -263,10 +282,11 @@
 	@"0.5",			@"UpdatePeriod",
 	@"4",			@"LagFactor",
 	@"16",			@"LayerFactor",
-	@"YES",			@"HideOnAutolaunch",
-	@"NO",			@"NXAutoLaunch",
+	//@"YES",			@"HideOnAutolaunch",
+	//@"NO",			@"NXAutoLaunch",
 	// For color systems.
-	@"1.000 1.000 1.000",	@"IdleColor",	// White
+	//@"1.000 1.000 1.000",	@"IdleColor",	// White
+	@"0.050 0.050 0.050",	@"IdleColor",	// black
 	@"0.333 0.667 0.867",	@"NiceColor",	// A light blue-green
 	@"0.200 0.467 0.800",	@"UserColor",	// A darker blue-green
 	@"0.000 0.000 1.000",	@"SystemColor",	// Blue
@@ -325,10 +345,12 @@
     steps = 1;
     
     [colorFields readColors];
+    /*
     if ([defaults boolForKey:@"HideOnAutolaunch"]
        && [defaults boolForKey:@"NXAutoLaunch"]) {
       [NSApp hide:self];
     }
+     */
 }
 
 - (void)display
