@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1402401616EC14A3005BDB19 /* InnerSpace_Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1402401516EC14A3005BDB19 /* InnerSpace_Icon.icns */; };
+		14085DD016F7F3B2003B674D /* ModuleTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 14085DCF16F7F3B2003B674D /* ModuleTile.m */; };
 		140964C516DDD6560046127D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A327B4145C6F7D00BD4F94 /* Cocoa.framework */; };
 		140964CB16DDD6560046127D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 140964C916DDD6560046127D /* InfoPlist.strings */; };
 		140964D216DDD68F0046127D /* BlackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140964D116DDD68F0046127D /* BlackView.m */; };
@@ -28,6 +29,10 @@
 		14183AC316CDB44300959AD7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14183AC116CDB44300959AD7 /* InfoPlist.strings */; };
 		14183ACB16CDB4AA00959AD7 /* PSOperators.h in Headers */ = {isa = PBXBuildFile; fileRef = 14E2F52A16B9D0BD0006A4B9 /* PSOperators.h */; };
 		14183ACC16CDB4AF00959AD7 /* PSOperators.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E2F52B16B9D0BD0006A4B9 /* PSOperators.m */; };
+		141BFDFB16F2A38B00DDD7BF /* ScreensView.m in Sources */ = {isa = PBXBuildFile; fileRef = 141BFDFA16F2A38B00DDD7BF /* ScreensView.m */; };
+		141BFDFE16F2A5A600DDD7BF /* ScreenButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 141BFDFD16F2A5A600DDD7BF /* ScreenButton.m */; };
+		141BFE0016F422E500DDD7BF /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141BFDFF16F422E400DDD7BF /* IOKit.framework */; };
+		141BFE0116F4231900DDD7BF /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141BFDFF16F422E400DDD7BF /* IOKit.framework */; };
 		1489D3FF16E3E6740079FC70 /* PolyhedraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140964E416DDD7AB0046127D /* PolyhedraView.m */; };
 		1489D40016E3E67F0079FC70 /* PolyhedraViewWraps.m in Sources */ = {isa = PBXBuildFile; fileRef = 140964E616DDD7AB0046127D /* PolyhedraViewWraps.m */; };
 		1489D40716E3E97A0079FC70 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A327B4145C6F7D00BD4F94 /* Cocoa.framework */; };
@@ -200,6 +205,8 @@
 
 /* Begin PBXFileReference section */
 		1402401516EC14A3005BDB19 /* InnerSpace_Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = InnerSpace_Icon.icns; path = InnerSpace/InnerSpace_Icon.icns; sourceTree = "<group>"; };
+		14085DCE16F7F3B2003B674D /* ModuleTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleTile.h; sourceTree = "<group>"; };
+		14085DCF16F7F3B2003B674D /* ModuleTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleTile.m; sourceTree = "<group>"; };
 		140964C416DDD6560046127D /* Black.InnerSpace */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Black.InnerSpace; sourceTree = BUILT_PRODUCTS_DIR; };
 		140964C816DDD6560046127D /* Black-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Black-Info.plist"; sourceTree = "<group>"; };
 		140964CA16DDD6560046127D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -228,6 +235,11 @@
 		14183AC016CDB44300959AD7 /* PSOperations-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PSOperations-Info.plist"; sourceTree = "<group>"; };
 		14183AC216CDB44300959AD7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		14183AC416CDB44300959AD7 /* PSOperations-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PSOperations-Prefix.pch"; sourceTree = "<group>"; };
+		141BFDF916F2A38B00DDD7BF /* ScreensView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreensView.h; sourceTree = "<group>"; };
+		141BFDFA16F2A38B00DDD7BF /* ScreensView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreensView.m; sourceTree = "<group>"; };
+		141BFDFC16F2A5A600DDD7BF /* ScreenButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenButton.h; sourceTree = "<group>"; };
+		141BFDFD16F2A5A600DDD7BF /* ScreenButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenButton.m; sourceTree = "<group>"; };
+		141BFDFF16F422E400DDD7BF /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		1489D40616E3E97A0079FC70 /* Spor.InnerSpace */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Spor.InnerSpace; sourceTree = BUILT_PRODUCTS_DIR; };
 		1489D40A16E3E97A0079FC70 /* Spor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Spor-Info.plist"; sourceTree = "<group>"; };
 		1489D40C16E3E97A0079FC70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -384,6 +396,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				141BFE0116F4231900DDD7BF /* IOKit.framework in Frameworks */,
 				14A055B116EEDE7E00352C72 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +407,7 @@
 			files = (
 				140964F116DDD8790046127D /* PSOperations.framework in Frameworks */,
 				14A327B5145C6F7D00BD4F94 /* Cocoa.framework in Frameworks */,
+				141BFE0016F422E500DDD7BF /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +522,12 @@
 				1492335F1503A06000245B25 /* SaverWindow.m */,
 				1409651116DEA8920046127D /* PreferencesPanelController.h */,
 				1409651216DEA8920046127D /* PreferencesPanelController.m */,
+				141BFDF916F2A38B00DDD7BF /* ScreensView.h */,
+				141BFDFA16F2A38B00DDD7BF /* ScreensView.m */,
+				141BFDFC16F2A5A600DDD7BF /* ScreenButton.h */,
+				141BFDFD16F2A5A600DDD7BF /* ScreenButton.m */,
+				14085DCE16F7F3B2003B674D /* ModuleTile.h */,
+				14085DCF16F7F3B2003B674D /* ModuleTile.m */,
 				14A327C0145C6F7D00BD4F94 /* main.m */,
 			);
 			name = Classes;
@@ -703,6 +723,7 @@
 			children = (
 				14A327B4145C6F7D00BD4F94 /* Cocoa.framework */,
 				14FDB8F41503FEF7007CE238 /* CoreFoundation.framework */,
+				141BFDFF16F422E400DDD7BF /* IOKit.framework */,
 				14A327B6145C6F7D00BD4F94 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -1197,6 +1218,9 @@
 				149233601503A06000245B25 /* InnerSpaceController.m in Sources */,
 				149233611503A06000245B25 /* SaverWindow.m in Sources */,
 				1409651316DEA8920046127D /* PreferencesPanelController.m in Sources */,
+				141BFDFB16F2A38B00DDD7BF /* ScreensView.m in Sources */,
+				141BFDFE16F2A5A600DDD7BF /* ScreenButton.m in Sources */,
+				14085DD016F7F3B2003B674D /* ModuleTile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1913,6 +1937,7 @@
 				14A055BA16EEDE7E00352C72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14A327AA145C6F7D00BD4F94 /* Build configuration list for PBXProject "InnerSpace" */ = {
 			isa = XCConfigurationList;

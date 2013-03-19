@@ -9,16 +9,18 @@
 #import "PreferencesPanelController.h"
 #import "ModuleView.h"
 #import "InnerSpaceController.h"
+#import "ScreensView.h"
+#import "ModuleTile.h"
 
 @implementation PreferencesPanelController
 
-- (id) initForScreen: (NSScreen *)aScreen
+- (id)init
 {
-    if(nil != (self = [super init]))
+    self = [super init];
+    if(self)
     {
-        screen = aScreen;
+        // Do nothing..
     }
-    
     return self;
 }
 
@@ -27,6 +29,57 @@
     [window performClose:nil];
     [emptyView release];
     [super dealloc];
+}
+
+- (void) drawModuleImage:(id)sender
+{
+    [[NSColor blackColor] set];
+    NSRectFill([module frame]);
+    [module oneStep];
+}
+
+- (void) loadAllModules
+{
+    NSDictionary *modules = [parentController modules];
+    NSArray *allKeys = [modules allKeys];
+    NSRect sampleRect = NSMakeRect(0, 0, 128, 80);
+    NSMutableArray *contentArray = [NSMutableArray arrayWithCapacity:[allKeys count]];
+    
+    for(NSString *moduleName in allKeys)
+    {
+        if([moduleName isEqualToString:@"Spor"])
+        {
+            continue;
+        }
+        
+        // Module...
+        ModuleView *view = [parentController loadModule:moduleName
+                                              withFrame:sampleRect];
+        for(int i = 0; i < 99; i++)
+        {
+            [view oneStep]; // step 99 steps into the view's life...
+        }
+        module = view;
+        
+        // Generate an image for the collection item...
+        NSImageRep *r;
+        NSImage *stipple;
+        stipple = [[NSImage alloc] initWithSize: sampleRect.size];
+        r = [[NSCustomImageRep alloc]
+             initWithDrawSelector: @selector(drawModuleImage:)
+             delegate: self];
+        [r setSize: sampleRect.size];
+        [stipple addRepresentation: r];
+        [r release];
+
+        // Create a collection item...
+        ModuleTile *tile = [[ModuleTile alloc] init];
+        tile.image = stipple;
+        tile.moduleName = moduleName;
+        [tiles addObject:tile];
+    }
+    
+    // [collectionView setContent:contentArray];
 }
 
 - (void) awakeFromNib
@@ -44,17 +97,26 @@
                                              selector:@selector(handleNotification:)
                                                  name:NSWindowWillCloseNotification
                                                object:window];
-    NSRect screenFrame = [screen frame];
-    NSRect windowFrame = [window frame];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(selectScreenNotification:)
+                                                 name:ScreensViewSelectedScreenNotification
+                                               object:nil];
+    
+    [self loadAllModules];
+    // NSRect screenFrame = [screen frame];
+    // NSRect windowFrame = [window frame];
     
     // Set the frame...
-    windowFrame.origin.x = screenFrame.origin.x + 100;
-    windowFrame.origin.y = screenFrame.origin.y + 100;
+    // windowFrame.origin.x = screenFrame.origin.x + 100;
+    // windowFrame.origin.y = screenFrame.origin.y + 100;
     
     // Show the window...
-    [window setFrame:windowFrame
-             display:NO];
+    //[window setFrame:windowFrame
+      //       display:NO];
+    [controlsView setContentView:emptyView];
     [window makeKeyAndOrderFront:self];
+    
 }
 
 - (void) handleNotification:(NSNotification *)notification
@@ -66,9 +128,16 @@
     }
 }
 
+- (void)selectScreenNotification:(NSNotification *)notification
+{
+    NSScreen *scr = [[notification object] screen];
+    NSLog(@"%@",scr);
+}
+
 // interface callbacks
 - (void) selectSaver: (id)sender
 {
+    /*
     NSInteger row = [moduleList selectedRow];
     NSMutableDictionary *modules = [parentController modules];
     
@@ -90,6 +159,7 @@
          object:nil
          userInfo:dict];
     }
+     */
 }
 
 /*
@@ -160,9 +230,11 @@
     if(row < [[modules allKeys] count])
     {
         NSIndexSet *rowIndex = [NSIndexSet indexSetWithIndex:row];
+        /*
         [moduleList reloadData];
         [moduleList selectRowIndexes:rowIndex byExtendingSelection:NO];
         [moduleList scrollRowToVisible:row]; // + 2];
+         */
     }
     
     NSLog(@"current module = %@",currentModuleName);

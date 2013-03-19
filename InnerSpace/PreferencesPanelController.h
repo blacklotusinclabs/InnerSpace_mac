@@ -13,7 +13,7 @@
 @interface PreferencesPanelController : NSObject <NSTableViewDataSource, NSTableViewDelegate>
 {
     // interface vars.
-    IBOutlet NSTableView *moduleList;
+    // IBOutlet NSTableView *moduleList;
     IBOutlet id inBackground;
     // IBOutlet id locker;
     // IBOutlet id saver;
@@ -23,6 +23,8 @@
     IBOutlet id speedSlider;
     IBOutlet NSWindow *window;    
     IBOutlet id emptyView;
+    IBOutlet NSCollectionView *collectionView;
+    IBOutlet NSArrayController *tiles;
     
     // booleans...
     BOOL isSaver;
@@ -31,11 +33,10 @@
     
     NSScreen *screen;
     NSString *currentModuleName;
+    id module;
     
     InnerSpaceController *parentController;
 }
-
-- (id)initForScreen:(NSScreen *)screen;
 
 // methods called from interface
 - (IBAction) selectSaver: (id)sender;

@@ -34,6 +34,7 @@
 // Locate modules...
 - (void) findModulesInDirectory: (NSString *) directory;
 - (void) findModules;
+- (id)loadModule:(NSString *)moduleName withFrame:(NSRect)frame;
 - (id) loadModule: (NSString *)moduleName forScreen:(NSScreen *)screen;
 - (void) closePreferencePanel:(PreferencesPanelController *)controller;
 

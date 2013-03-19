@@ -418,24 +418,22 @@ void DisplayReconfigurationCallBack (CGDirectDisplayID display,
 - (void) findModulesInDirectory: (NSString *) directory
 {
     NSFileManager *fm = [NSFileManager defaultManager];
-    NSArray *files = [fm contentsOfDirectoryAtPath:directory
-                                             error:NULL]; // directoryContentsAtPath: directory];
+    NSArray *files = [fm contentsOfDirectoryAtPath:directory error:NULL];
     NSEnumerator *en = [files objectEnumerator];
     id item = nil;
     
-    NSLog(@"directory = %@",directory);
     while((item = [en nextObject]) != nil)
     {
-        NSLog(@"file = %@",item);
         if([[item pathExtension] isEqualToString: @"InnerSpace"])
         {
             NSString *fullPath = [directory stringByAppendingPathComponent: item];
             NSMutableDictionary *infoDict = [NSMutableDictionary dictionary];
             
-            [infoDict setObject: fullPath forKey: @"Path"];
-            
-            [modules setObject: infoDict forKey: [item stringByDeletingPathExtension]];
-            NSLog(@"modules = %@",modules);
+            // Build info dictionary...
+            [infoDict setObject: fullPath
+                         forKey: @"Path"];
+            [modules setObject: infoDict
+                        forKey: [item stringByDeletingPathExtension]];
         }
     }
 }
@@ -517,8 +515,9 @@ void DisplayReconfigurationCallBack (CGDirectDisplayID display,
     return result;
 }
 
-- (id)loadModule:(NSString *)moduleName forScreen:(NSScreen *)screen
+- (id)loadModule:(NSString *)moduleName withFrame:(NSRect)frame
 {
+    
     id newModule = nil;
     
     if(moduleName)
@@ -535,11 +534,11 @@ void DisplayReconfigurationCallBack (CGDirectDisplayID display,
             theViewClass = [bundle principalClass];
             if(theViewClass != nil)
             {
-                newModule = [[theViewClass alloc] initWithFrame: [screen frame]];
+                newModule = [[theViewClass alloc] initWithFrame:frame];
             }
         }
     }
-
+    
     if(newModule)
     {
         // [self createSaverWindow: newModule];
@@ -550,22 +549,22 @@ void DisplayReconfigurationCallBack (CGDirectDisplayID display,
     return newModule;
 }
 
+- (id)loadModule:(NSString *)moduleName forScreen:(NSScreen *)screen
+{
+    return [self loadModule:moduleName withFrame:[screen frame]];
+}
+
 - (IBAction)showPreferencePanels:(id)sender
 {
-    NSArray *screens = [NSScreen screens];
-
-    for(NSScreen *screen in screens)
-    {
-        PreferencesPanelController *controller = [[PreferencesPanelController alloc]
-                                                  initForScreen:screen];
-        
-        [controller setParentController:self];
-        
-        [NSBundle loadNibNamed:@"PreferencesPanel"
-                         owner:controller];
-        [controllers addObject:controller];
-        [controller release];
-    }
+    PreferencesPanelController *controller = [[PreferencesPanelController alloc]
+                                              init];
+    
+    [controller setParentController:self];
+    
+    [NSBundle loadNibNamed:@"PreferencesPanel"
+                     owner:controller];
+    [controllers addObject:controller];
+    [controller release];
 }
 
 - (void) closePreferencePanel:(PreferencesPanelController *)controller
