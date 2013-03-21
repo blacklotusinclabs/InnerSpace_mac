@@ -219,4 +219,10 @@
     [timer invalidate];
 }
 
+- (NSImage *)icon
+{
+    // NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    NSImage *icon = [NSImage imageNamed:@"Icon"];
+    return icon;
+}
 @end

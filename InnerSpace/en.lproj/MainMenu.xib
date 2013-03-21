@@ -323,14 +323,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">doSaver:</string>
-						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="837448267"/>
-					</object>
-					<int key="connectionID">567</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
 						<string key="label">showPreferencePanels:</string>
 						<reference key="source" ref="976324537"/>
 						<reference key="destination" ref="609285721"/>

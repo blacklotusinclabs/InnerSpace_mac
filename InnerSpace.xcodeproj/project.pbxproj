@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1402401616EC14A3005BDB19 /* InnerSpace_Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1402401516EC14A3005BDB19 /* InnerSpace_Icon.icns */; };
 		14085DD016F7F3B2003B674D /* ModuleTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 14085DCF16F7F3B2003B674D /* ModuleTile.m */; };
+		14085DD216F8D8DB003B674D /* DefaultIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 14085DD116F8D8DB003B674D /* DefaultIcon.png */; };
+		14085DD516F94561003B674D /* ISCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 14085DD416F94560003B674D /* ISCollectionViewItem.m */; };
+		14085DD816F9473A003B674D /* ModuleTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14085DD716F9473A003B674D /* ModuleTileView.m */; };
 		140964C516DDD6560046127D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A327B4145C6F7D00BD4F94 /* Cocoa.framework */; };
 		140964CB16DDD6560046127D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 140964C916DDD6560046127D /* InfoPlist.strings */; };
 		140964D216DDD68F0046127D /* BlackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140964D116DDD68F0046127D /* BlackView.m */; };
@@ -207,6 +210,11 @@
 		1402401516EC14A3005BDB19 /* InnerSpace_Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = InnerSpace_Icon.icns; path = InnerSpace/InnerSpace_Icon.icns; sourceTree = "<group>"; };
 		14085DCE16F7F3B2003B674D /* ModuleTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleTile.h; sourceTree = "<group>"; };
 		14085DCF16F7F3B2003B674D /* ModuleTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleTile.m; sourceTree = "<group>"; };
+		14085DD116F8D8DB003B674D /* DefaultIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultIcon.png; sourceTree = "<group>"; };
+		14085DD316F94560003B674D /* ISCollectionViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISCollectionViewItem.h; sourceTree = "<group>"; };
+		14085DD416F94560003B674D /* ISCollectionViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISCollectionViewItem.m; sourceTree = "<group>"; };
+		14085DD616F9473A003B674D /* ModuleTileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleTileView.h; sourceTree = "<group>"; };
+		14085DD716F9473A003B674D /* ModuleTileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleTileView.m; sourceTree = "<group>"; };
 		140964C416DDD6560046127D /* Black.InnerSpace */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Black.InnerSpace; sourceTree = BUILT_PRODUCTS_DIR; };
 		140964C816DDD6560046127D /* Black-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Black-Info.plist"; sourceTree = "<group>"; };
 		140964CA16DDD6560046127D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -504,6 +512,7 @@
 		1409651416DEA8A60046127D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				14085DD116F8D8DB003B674D /* DefaultIcon.png */,
 				1402401516EC14A3005BDB19 /* InnerSpace_Icon.icns */,
 				14A327C9145C6F7E00BD4F94 /* MainMenu.xib */,
 				1409650F16DE846F0046127D /* PreferencesPanel.xib */,
@@ -515,6 +524,7 @@
 		1409651516DEA8BD0046127D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				14A327C0145C6F7D00BD4F94 /* main.m */,
 				1492335B1503A06000245B25 /* InnerSpaceController.h */,
 				1492335C1503A06000245B25 /* InnerSpaceController.m */,
 				1492335D1503A06000245B25 /* ModuleView.h */,
@@ -528,7 +538,10 @@
 				141BFDFD16F2A5A600DDD7BF /* ScreenButton.m */,
 				14085DCE16F7F3B2003B674D /* ModuleTile.h */,
 				14085DCF16F7F3B2003B674D /* ModuleTile.m */,
-				14A327C0145C6F7D00BD4F94 /* main.m */,
+				14085DD316F94560003B674D /* ISCollectionViewItem.h */,
+				14085DD416F94560003B674D /* ISCollectionViewItem.m */,
+				14085DD616F9473A003B674D /* ModuleTileView.h */,
+				14085DD716F9473A003B674D /* ModuleTileView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1116,6 +1129,7 @@
 				14A327CB145C6F7E00BD4F94 /* MainMenu.xib in Resources */,
 				1409651016DE846F0046127D /* PreferencesPanel.xib in Resources */,
 				1402401616EC14A3005BDB19 /* InnerSpace_Icon.icns in Resources */,
+				14085DD216F8D8DB003B674D /* DefaultIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1221,6 +1235,8 @@
 				141BFDFB16F2A38B00DDD7BF /* ScreensView.m in Sources */,
 				141BFDFE16F2A5A600DDD7BF /* ScreenButton.m in Sources */,
 				14085DD016F7F3B2003B674D /* ModuleTile.m in Sources */,
+				14085DD516F94561003B674D /* ISCollectionViewItem.m in Sources */,
+				14085DD816F9473A003B674D /* ModuleTileView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

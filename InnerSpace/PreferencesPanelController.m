@@ -26,7 +26,10 @@
 
 - (void) dealloc
 {
+    [tiles removeObserver:self forKeyPath:@"selectionIndexes"];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [window performClose:nil];
+    
     [emptyView release];
     [super dealloc];
 }
@@ -42,44 +45,33 @@
 {
     NSDictionary *modules = [parentController modules];
     NSArray *allKeys = [modules allKeys];
-    NSRect sampleRect = NSMakeRect(0, 0, 128, 80);
-    NSMutableArray *contentArray = [NSMutableArray arrayWithCapacity:[allKeys count]];
+    NSRect sampleRect = NSMakeRect(0, 0, 1280, 800);
     
     for(NSString *moduleName in allKeys)
     {
-        if([moduleName isEqualToString:@"Spor"])
-        {
-            continue;
-        }
-        
         // Module...
         ModuleView *view = [parentController loadModule:moduleName
                                               withFrame:sampleRect];
-        for(int i = 0; i < 99; i++)
-        {
-            [view oneStep]; // step 99 steps into the view's life...
-        }
-        module = view;
-        
-        // Generate an image for the collection item...
-        NSImageRep *r;
-        NSImage *stipple;
-        stipple = [[NSImage alloc] initWithSize: sampleRect.size];
-        r = [[NSCustomImageRep alloc]
-             initWithDrawSelector: @selector(drawModuleImage:)
-             delegate: self];
-        [r setSize: sampleRect.size];
-        [stipple addRepresentation: r];
-        [r release];
-
-        // Create a collection item...
         ModuleTile *tile = [[ModuleTile alloc] init];
-        tile.image = stipple;
+        
+        // Get icon if it's present...
+        if([view respondsToSelector:@selector(icon)])
+        {
+            tile.image = [view icon];
+        }
+        else
+        {
+            tile.image = nil;
+        }
+        
+        if(tile.image == nil)
+        {
+            tile.image = [NSImage imageNamed:@"DefaultIcon"];
+        }
+        
         tile.moduleName = moduleName;
         [tiles addObject:tile];
     }
-    
-    // [collectionView setContent:contentArray];
 }
 
 - (void) awakeFromNib
@@ -103,20 +95,39 @@
                                                  name:ScreensViewSelectedScreenNotification
                                                object:nil];
     
+    [tiles addObserver:self
+            forKeyPath:@"selectionIndexes"
+               options:NSKeyValueObservingOptionNew
+               context:nil];
+    
     [self loadAllModules];
-    // NSRect screenFrame = [screen frame];
-    // NSRect windowFrame = [window frame];
-    
-    // Set the frame...
-    // windowFrame.origin.x = screenFrame.origin.x + 100;
-    // windowFrame.origin.y = screenFrame.origin.y + 100;
-    
-    // Show the window...
-    //[window setFrame:windowFrame
-      //       display:NO];
+
     [controlsView setContentView:emptyView];
     [window makeKeyAndOrderFront:self];
     
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath
+                     ofObject:(id)object
+                       change:(NSDictionary *)change
+                      context:(void *)context
+{
+    if([keyPath isEqualTo:@"selectionIndexes"])
+    {
+        if([[tiles selectedObjects] count] > 0)
+        {
+            if ([[tiles selectedObjects] count] == 1)
+            {
+                ModuleTile *t = (ModuleTile *)
+                [[tiles selectedObjects] objectAtIndex:0];
+                NSLog(@"Only 1 selected: %@", t.moduleName);
+            }
+            else
+            {
+                // More than one selected - iterate if need be
+            }
+        }
+    }
 }
 
 - (void) handleNotification:(NSNotification *)notification
@@ -131,7 +142,17 @@
 - (void)selectScreenNotification:(NSNotification *)notification
 {
     NSScreen *scr = [[notification object] screen];
-    NSLog(@"%@",scr);
+    NSNumber *screenId = [[scr deviceDescription] objectForKey:@"NSScreenNumber"];
+    NSString *screenKey = [NSString stringWithFormat:@"currentModule_%@",screenId];
+    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+    NSString *moduleName = [defs objectForKey:screenKey];
+    NSUInteger index = [[[parentController modules] allKeys] indexOfObject:moduleName];
+    
+    [tiles setSelectedObjects:[NSArray array]];
+    [tiles setSelectionIndex:index];
+    
+    // NSLog(@"%@ %@ %ld",scr,moduleName,(unsigned long)index);
+    
 }
 
 // interface callbacks
@@ -160,6 +181,7 @@
          userInfo:dict];
     }
      */
+    NSLog(@"Selected");
 }
 
 /*
@@ -249,6 +271,12 @@
 {
     return parentController;
 }
+
+- (NSString *)moduleNameForScreen:(NSScreen *)screen
+{
+    
+}
+
 @end
 
 @implementation PreferencesPanelController (TableDelegateDataSource)

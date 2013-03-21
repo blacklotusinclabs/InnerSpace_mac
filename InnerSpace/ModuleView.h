@@ -24,4 +24,6 @@
 - (void) enteredScreenSaverMode;
 - (void) willExitScreenSaverMode;
 - (void) stopModule;
+
+- (NSImage *)icon;
 @end

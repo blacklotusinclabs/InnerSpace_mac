@@ -101,7 +101,7 @@ void DisplayReconfigurationCallBack (CGDirectDisplayID display,
 
 - (void) doSaverInBackground: (id)sender
 {
-    NSLog(@"Called");
+    // NSLog(@"Called");
     [self createSaverWindow: YES];
 }
 
@@ -526,16 +526,20 @@ void DisplayReconfigurationCallBack (CGDirectDisplayID display,
         Class    theViewClass;
         NSString *bundlePath = [self _pathForModule: moduleName];
         
-        NSLog(@"Bundle path = %@",bundlePath);
+        // NSLog(@"Bundle path = %@",bundlePath);
         bundle = [NSBundle bundleWithPath: bundlePath];
         if(bundle != nil)
         {
-            NSLog(@"Bundle loaded");
+            // NSLog(@"Bundle loaded");
             theViewClass = [bundle principalClass];
             if(theViewClass != nil)
             {
                 newModule = [[theViewClass alloc] initWithFrame:frame];
             }
+        }
+        else
+        {
+            NSLog(@"Bundle failed to load %@",moduleName);
         }
     }
     

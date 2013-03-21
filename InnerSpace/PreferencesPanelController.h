@@ -52,5 +52,6 @@
 
 - (void) setParentController:(InnerSpaceController *)controller;
 - (InnerSpaceController *)parentController;
+- (NSString *)moduleNameForScreen:(NSScreen *)screen;
 
 @end

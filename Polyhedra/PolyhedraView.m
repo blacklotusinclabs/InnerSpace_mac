@@ -37,7 +37,7 @@ CGFloat randBetween(CGFloat lower, CGFloat upper)
         temp = lower; lower = upper; upper = temp;
     }
     result = ((upper - lower) * RAND + lower);
-    printf("upper = %f, lower = %f, result = %f\n",upper,lower,result);
+    // printf("upper = %f, lower = %f, result = %f\n",upper,lower,result);
     return result;
 }
 // #endif
