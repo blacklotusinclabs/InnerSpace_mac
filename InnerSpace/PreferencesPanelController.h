@@ -23,8 +23,8 @@
     IBOutlet id speedSlider;
     IBOutlet NSWindow *window;    
     IBOutlet id emptyView;
-    IBOutlet NSCollectionView *collectionView;
-    IBOutlet NSArrayController *tiles;
+    IBOutlet NSTableView *modulesTableView;
+    NSMutableArray *moduleArray;
     
     // booleans...
     BOOL isSaver;

@@ -35,48 +35,18 @@
 		141BFDFB16F2A38B00DDD7BF /* ScreensView.m in Sources */ = {isa = PBXBuildFile; fileRef = 141BFDFA16F2A38B00DDD7BF /* ScreensView.m */; };
 		141BFDFE16F2A5A600DDD7BF /* ScreenButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 141BFDFD16F2A5A600DDD7BF /* ScreenButton.m */; };
 		141BFE0016F422E500DDD7BF /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141BFDFF16F422E400DDD7BF /* IOKit.framework */; };
-		141BFE0116F4231900DDD7BF /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141BFDFF16F422E400DDD7BF /* IOKit.framework */; };
 		1489D3FF16E3E6740079FC70 /* PolyhedraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140964E416DDD7AB0046127D /* PolyhedraView.m */; };
 		1489D40016E3E67F0079FC70 /* PolyhedraViewWraps.m in Sources */ = {isa = PBXBuildFile; fileRef = 140964E616DDD7AB0046127D /* PolyhedraViewWraps.m */; };
-		1489D40716E3E97A0079FC70 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A327B4145C6F7D00BD4F94 /* Cocoa.framework */; };
-		1489D40D16E3E97A0079FC70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1489D40B16E3E97A0079FC70 /* InfoPlist.strings */; };
-		1489D42316E3EB830079FC70 /* Spor.InnerSpace in Resources */ = {isa = PBXBuildFile; fileRef = 1489D40616E3E97A0079FC70 /* Spor.InnerSpace */; };
-		1489D42516E3EBA30079FC70 /* spordefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 1489D41616E3E9C30079FC70 /* spordefs.m */; };
-		1489D42616E3EBA90079FC70 /* SporView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1489D41C16E3E9E10079FC70 /* SporView.m */; };
-		1489D42716E3EBB30079FC70 /* sporen6.m in Sources */ = {isa = PBXBuildFile; fileRef = 1489D41816E3E9C30079FC70 /* sporen6.m */; };
-		1489D42816E3EBBA0079FC70 /* draw.m in Sources */ = {isa = PBXBuildFile; fileRef = 1489D41316E3E9AA0079FC70 /* draw.m */; };
-		1489D42916E3EC530079FC70 /* PSOperations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14183ABC16CDB44300959AD7 /* PSOperations.framework */; };
-		1489D42F16E3F0610079FC70 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A327B4145C6F7D00BD4F94 /* Cocoa.framework */; };
-		1489D43516E3F0610079FC70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1489D43316E3F0610079FC70 /* InfoPlist.strings */; };
-		1489D43C16E3F0990079FC70 /* ItJustStoppedViewPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1489D43B16E3F0990079FC70 /* ItJustStoppedViewPart.m */; };
-		1489D43F16E3F0C80079FC70 /* PSOperations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14183ABC16CDB44300959AD7 /* PSOperations.framework */; };
-		1489D44216E3F0DE0079FC70 /* ItJustStopped.InnerSpace in Resources */ = {isa = PBXBuildFile; fileRef = 1489D42E16E3F0600079FC70 /* ItJustStopped.InnerSpace */; };
 		1489D44316E3F0E90079FC70 /* PSOperations.framework in Resources */ = {isa = PBXBuildFile; fileRef = 14183ABC16CDB44300959AD7 /* PSOperations.framework */; };
 		1489D44916E3F33B0079FC70 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A327B4145C6F7D00BD4F94 /* Cocoa.framework */; };
 		1489D44F16E3F33B0079FC70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1489D44D16E3F33B0079FC70 /* InfoPlist.strings */; };
 		1489D45616E3F3590079FC70 /* BoxesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1489D45516E3F3590079FC70 /* BoxesView.m */; };
 		1489D45B16E3F39F0079FC70 /* Boxes.InnerSpace in Resources */ = {isa = PBXBuildFile; fileRef = 1489D44816E3F33B0079FC70 /* Boxes.InnerSpace */; };
 		1489D45C16E3F3AD0079FC70 /* PSOperations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14183ABC16CDB44300959AD7 /* PSOperations.framework */; };
-		1489D46216E3F97A0079FC70 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A327B4145C6F7D00BD4F94 /* Cocoa.framework */; };
-		1489D46816E3F97B0079FC70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1489D46616E3F97B0079FC70 /* InfoPlist.strings */; };
-		1489D47016E3F9B50079FC70 /* PSOperations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14183ABC16CDB44300959AD7 /* PSOperations.framework */; };
-		1489D47516E3F9D10079FC70 /* NickSpace.InnerSpace in Resources */ = {isa = PBXBuildFile; fileRef = 1489D46116E3F97A0079FC70 /* NickSpace.InnerSpace */; };
-		1489D47616E3F9FA0079FC70 /* NickSpaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1489D46E16E3F9A10079FC70 /* NickSpaceView.m */; };
-		1489D48C16E41D470079FC70 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A327B4145C6F7D00BD4F94 /* Cocoa.framework */; };
-		1489D49216E41D470079FC70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1489D49016E41D470079FC70 /* InfoPlist.strings */; };
-		1489D49916E41D850079FC70 /* PSOperations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14183ABC16CDB44300959AD7 /* PSOperations.framework */; };
-		1489D49F16E41E440079FC70 /* QixView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1489D49D16E41DE20079FC70 /* QixView.m */; };
-		1489D4A016E41E7C0079FC70 /* Qix.InnerSpace in Resources */ = {isa = PBXBuildFile; fileRef = 1489D48B16E41D470079FC70 /* Qix.InnerSpace */; };
 		149233601503A06000245B25 /* InnerSpaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1492335C1503A06000245B25 /* InnerSpaceController.m */; };
 		149233611503A06000245B25 /* SaverWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1492335F1503A06000245B25 /* SaverWindow.m */; };
-		14A055B116EEDE7E00352C72 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A327B4145C6F7D00BD4F94 /* Cocoa.framework */; };
-		14A055B716EEDE7E00352C72 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14A055B516EEDE7E00352C72 /* InfoPlist.strings */; };
-		14A055BC16EEDED200352C72 /* CPUMonitor.InnerSpace in Resources */ = {isa = PBXBuildFile; fileRef = 14A055B016EEDE7E00352C72 /* CPUMonitor.InnerSpace */; };
-		14A055C316EEE22100352C72 /* NSColorExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A055C216EEE22100352C72 /* NSColorExtensions.m */; };
-		14A055C716EEE27800352C72 /* loadave.c in Sources */ = {isa = PBXBuildFile; fileRef = 14A055C416EEE27800352C72 /* loadave.c */; };
-		14A055CE16EEE2D200352C72 /* Percentages.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A055C916EEE2D100352C72 /* Percentages.m */; };
-		14A055CF16EEE2D200352C72 /* TimeMonColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A055CB16EEE2D100352C72 /* TimeMonColors.m */; };
-		14A055D016EEE2D200352C72 /* TimeMonWraps.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A055CD16EEE2D200352C72 /* TimeMonWraps.m */; };
+		14A0BBBA178DF13F00A9BCF0 /* PreferencesPanelCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A0BBB8178DF13F00A9BCF0 /* PreferencesPanelCellViewController.m */; };
+		14A0BBBB178DF13F00A9BCF0 /* PreferencesPanelCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14A0BBB9178DF13F00A9BCF0 /* PreferencesPanelCellViewController.xib */; };
 		14A327B5145C6F7D00BD4F94 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A327B4145C6F7D00BD4F94 /* Cocoa.framework */; };
 		14A327BF145C6F7D00BD4F94 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14A327BD145C6F7D00BD4F94 /* InfoPlist.strings */; };
 		14A327C1145C6F7D00BD4F94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A327C0145C6F7D00BD4F94 /* main.m */; };
@@ -127,34 +97,6 @@
 			remoteGlobalIDString = 14183ABB16CDB44300959AD7;
 			remoteInfo = PSOperations;
 		};
-		1489D41F16E3EA210079FC70 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 14A327A7145C6F7D00BD4F94 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 14183ABB16CDB44300959AD7;
-			remoteInfo = PSOperations;
-		};
-		1489D42116E3EA280079FC70 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 14A327A7145C6F7D00BD4F94 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1489D40516E3E97A0079FC70;
-			remoteInfo = Spor;
-		};
-		1489D43D16E3F0C20079FC70 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 14A327A7145C6F7D00BD4F94 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 14183ABB16CDB44300959AD7;
-			remoteInfo = PSOperations;
-		};
-		1489D44016E3F0D00079FC70 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 14A327A7145C6F7D00BD4F94 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1489D42D16E3F0600079FC70;
-			remoteInfo = ItJustStopped;
-		};
 		1489D45716E3F38E0079FC70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 14A327A7145C6F7D00BD4F94 /* Project object */;
@@ -168,41 +110,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1489D44716E3F33B0079FC70;
 			remoteInfo = Boxes;
-		};
-		1489D47116E3F9BD0079FC70 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 14A327A7145C6F7D00BD4F94 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 14183ABB16CDB44300959AD7;
-			remoteInfo = PSOperations;
-		};
-		1489D47316E3F9C80079FC70 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 14A327A7145C6F7D00BD4F94 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1489D46016E3F97A0079FC70;
-			remoteInfo = NickSpace;
-		};
-		1489D49716E41D7B0079FC70 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 14A327A7145C6F7D00BD4F94 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 14183ABB16CDB44300959AD7;
-			remoteInfo = PSOperations;
-		};
-		1489D49A16E41D8E0079FC70 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 14A327A7145C6F7D00BD4F94 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1489D48A16E41D470079FC70;
-			remoteInfo = Qix;
-		};
-		14A055BD16EEDEE800352C72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 14A327A7145C6F7D00BD4F94 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 14A055AF16EEDE7E00352C72;
-			remoteInfo = CPUMonitor;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -248,7 +155,6 @@
 		141BFDFC16F2A5A600DDD7BF /* ScreenButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenButton.h; sourceTree = "<group>"; };
 		141BFDFD16F2A5A600DDD7BF /* ScreenButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenButton.m; sourceTree = "<group>"; };
 		141BFDFF16F422E400DDD7BF /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		1489D40616E3E97A0079FC70 /* Spor.InnerSpace */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Spor.InnerSpace; sourceTree = BUILT_PRODUCTS_DIR; };
 		1489D40A16E3E97A0079FC70 /* Spor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Spor-Info.plist"; sourceTree = "<group>"; };
 		1489D40C16E3E97A0079FC70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1489D40E16E3E97A0079FC70 /* Spor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spor-Prefix.pch"; sourceTree = "<group>"; };
@@ -261,7 +167,6 @@
 		1489D41B16E3E9E10079FC70 /* SporView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SporView.h; sourceTree = "<group>"; };
 		1489D41C16E3E9E10079FC70 /* SporView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SporView.m; sourceTree = "<group>"; };
 		1489D41D16E3E9E10079FC70 /* Thinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thinker.h; sourceTree = "<group>"; };
-		1489D42E16E3F0600079FC70 /* ItJustStopped.InnerSpace */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItJustStopped.InnerSpace; sourceTree = BUILT_PRODUCTS_DIR; };
 		1489D43216E3F0610079FC70 /* ItJustStopped-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ItJustStopped-Info.plist"; sourceTree = "<group>"; };
 		1489D43416E3F0610079FC70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1489D43616E3F0610079FC70 /* ItJustStopped-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ItJustStopped-Prefix.pch"; sourceTree = "<group>"; };
@@ -273,13 +178,11 @@
 		1489D45016E3F33B0079FC70 /* Boxes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Boxes-Prefix.pch"; sourceTree = "<group>"; };
 		1489D45416E3F3590079FC70 /* BoxesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxesView.h; sourceTree = "<group>"; };
 		1489D45516E3F3590079FC70 /* BoxesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoxesView.m; sourceTree = "<group>"; };
-		1489D46116E3F97A0079FC70 /* NickSpace.InnerSpace */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NickSpace.InnerSpace; sourceTree = BUILT_PRODUCTS_DIR; };
 		1489D46516E3F97A0079FC70 /* NickSpace-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NickSpace-Info.plist"; sourceTree = "<group>"; };
 		1489D46716E3F97B0079FC70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1489D46916E3F97B0079FC70 /* NickSpace-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NickSpace-Prefix.pch"; sourceTree = "<group>"; };
 		1489D46D16E3F9A10079FC70 /* NickSpaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NickSpaceView.h; sourceTree = "<group>"; };
 		1489D46E16E3F9A10079FC70 /* NickSpaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NickSpaceView.m; sourceTree = "<group>"; };
-		1489D48B16E41D470079FC70 /* Qix.InnerSpace */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Qix.InnerSpace; sourceTree = BUILT_PRODUCTS_DIR; };
 		1489D48F16E41D470079FC70 /* Qix-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Qix-Info.plist"; sourceTree = "<group>"; };
 		1489D49116E41D470079FC70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1489D49316E41D470079FC70 /* Qix-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Qix-Prefix.pch"; sourceTree = "<group>"; };
@@ -290,7 +193,6 @@
 		1492335D1503A06000245B25 /* ModuleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleView.h; sourceTree = "<group>"; };
 		1492335E1503A06000245B25 /* SaverWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaverWindow.h; sourceTree = "<group>"; };
 		1492335F1503A06000245B25 /* SaverWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaverWindow.m; sourceTree = "<group>"; };
-		14A055B016EEDE7E00352C72 /* CPUMonitor.InnerSpace */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CPUMonitor.InnerSpace; sourceTree = BUILT_PRODUCTS_DIR; };
 		14A055B416EEDE7E00352C72 /* CPUMonitor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CPUMonitor-Info.plist"; sourceTree = "<group>"; };
 		14A055B616EEDE7E00352C72 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		14A055B816EEDE7E00352C72 /* CPUMonitor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPUMonitor-Prefix.pch"; sourceTree = "<group>"; };
@@ -304,6 +206,9 @@
 		14A055CB16EEE2D100352C72 /* TimeMonColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeMonColors.m; sourceTree = "<group>"; };
 		14A055CC16EEE2D100352C72 /* TimeMonWraps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeMonWraps.h; sourceTree = "<group>"; };
 		14A055CD16EEE2D200352C72 /* TimeMonWraps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeMonWraps.m; sourceTree = "<group>"; };
+		14A0BBB7178DF13F00A9BCF0 /* PreferencesPanelCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesPanelCellViewController.h; sourceTree = "<group>"; };
+		14A0BBB8178DF13F00A9BCF0 /* PreferencesPanelCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesPanelCellViewController.m; sourceTree = "<group>"; };
+		14A0BBB9178DF13F00A9BCF0 /* PreferencesPanelCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesPanelCellViewController.xib; sourceTree = "<group>"; };
 		14A327B0145C6F7D00BD4F94 /* InnerSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InnerSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14A327B4145C6F7D00BD4F94 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		14A327B7145C6F7D00BD4F94 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -355,57 +260,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1489D40316E3E97A0079FC70 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1489D42916E3EC530079FC70 /* PSOperations.framework in Frameworks */,
-				1489D40716E3E97A0079FC70 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1489D42B16E3F0600079FC70 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1489D43F16E3F0C80079FC70 /* PSOperations.framework in Frameworks */,
-				1489D42F16E3F0610079FC70 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1489D44516E3F33B0079FC70 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1489D45C16E3F3AD0079FC70 /* PSOperations.framework in Frameworks */,
 				1489D44916E3F33B0079FC70 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1489D45E16E3F97A0079FC70 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1489D47016E3F9B50079FC70 /* PSOperations.framework in Frameworks */,
-				1489D46216E3F97A0079FC70 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1489D48816E41D470079FC70 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1489D49916E41D850079FC70 /* PSOperations.framework in Frameworks */,
-				1489D48C16E41D470079FC70 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		14A055AD16EEDE7E00352C72 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				141BFE0116F4231900DDD7BF /* IOKit.framework in Frameworks */,
-				14A055B116EEDE7E00352C72 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +402,9 @@
 				14085DD416F94560003B674D /* ISCollectionViewItem.m */,
 				14085DD616F9473A003B674D /* ModuleTileView.h */,
 				14085DD716F9473A003B674D /* ModuleTileView.m */,
+				14A0BBB7178DF13F00A9BCF0 /* PreferencesPanelCellViewController.h */,
+				14A0BBB8178DF13F00A9BCF0 /* PreferencesPanelCellViewController.m */,
+				14A0BBB9178DF13F00A9BCF0 /* PreferencesPanelCellViewController.xib */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -721,12 +584,7 @@
 				140964C416DDD6560046127D /* Black.InnerSpace */,
 				140964D716DDD78D0046127D /* Polyhedra.InnerSpace */,
 				140964F816DDE06C0046127D /* Space.InnerSpace */,
-				1489D40616E3E97A0079FC70 /* Spor.InnerSpace */,
-				1489D42E16E3F0600079FC70 /* ItJustStopped.InnerSpace */,
 				1489D44816E3F33B0079FC70 /* Boxes.InnerSpace */,
-				1489D46116E3F97A0079FC70 /* NickSpace.InnerSpace */,
-				1489D48B16E41D470079FC70 /* Qix.InnerSpace */,
-				14A055B016EEDE7E00352C72 /* CPUMonitor.InnerSpace */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -858,42 +716,6 @@
 			productReference = 14183ABC16CDB44300959AD7 /* PSOperations.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		1489D40516E3E97A0079FC70 /* Spor */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1489D40F16E3E97A0079FC70 /* Build configuration list for PBXNativeTarget "Spor" */;
-			buildPhases = (
-				1489D40216E3E97A0079FC70 /* Sources */,
-				1489D40316E3E97A0079FC70 /* Frameworks */,
-				1489D40416E3E97A0079FC70 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1489D42016E3EA210079FC70 /* PBXTargetDependency */,
-			);
-			name = Spor;
-			productName = Spor;
-			productReference = 1489D40616E3E97A0079FC70 /* Spor.InnerSpace */;
-			productType = "com.apple.product-type.bundle";
-		};
-		1489D42D16E3F0600079FC70 /* ItJustStopped */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1489D43716E3F0610079FC70 /* Build configuration list for PBXNativeTarget "ItJustStopped" */;
-			buildPhases = (
-				1489D42A16E3F0600079FC70 /* Sources */,
-				1489D42B16E3F0600079FC70 /* Frameworks */,
-				1489D42C16E3F0600079FC70 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1489D43E16E3F0C20079FC70 /* PBXTargetDependency */,
-			);
-			name = ItJustStopped;
-			productName = ItJustStopped;
-			productReference = 1489D42E16E3F0600079FC70 /* ItJustStopped.InnerSpace */;
-			productType = "com.apple.product-type.bundle";
-		};
 		1489D44716E3F33B0079FC70 /* Boxes */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1489D45116E3F33B0079FC70 /* Build configuration list for PBXNativeTarget "Boxes" */;
@@ -912,59 +734,6 @@
 			productReference = 1489D44816E3F33B0079FC70 /* Boxes.InnerSpace */;
 			productType = "com.apple.product-type.bundle";
 		};
-		1489D46016E3F97A0079FC70 /* NickSpace */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1489D46A16E3F97B0079FC70 /* Build configuration list for PBXNativeTarget "NickSpace" */;
-			buildPhases = (
-				1489D45D16E3F97A0079FC70 /* Sources */,
-				1489D45E16E3F97A0079FC70 /* Frameworks */,
-				1489D45F16E3F97A0079FC70 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1489D47216E3F9BD0079FC70 /* PBXTargetDependency */,
-			);
-			name = NickSpace;
-			productName = NickSpace;
-			productReference = 1489D46116E3F97A0079FC70 /* NickSpace.InnerSpace */;
-			productType = "com.apple.product-type.bundle";
-		};
-		1489D48A16E41D470079FC70 /* Qix */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1489D49416E41D470079FC70 /* Build configuration list for PBXNativeTarget "Qix" */;
-			buildPhases = (
-				1489D48716E41D470079FC70 /* Sources */,
-				1489D48816E41D470079FC70 /* Frameworks */,
-				1489D48916E41D470079FC70 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1489D49816E41D7B0079FC70 /* PBXTargetDependency */,
-			);
-			name = Qix;
-			productName = Qix;
-			productReference = 1489D48B16E41D470079FC70 /* Qix.InnerSpace */;
-			productType = "com.apple.product-type.bundle";
-		};
-		14A055AF16EEDE7E00352C72 /* CPUMonitor */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 14A055BB16EEDE7E00352C72 /* Build configuration list for PBXNativeTarget "CPUMonitor" */;
-			buildPhases = (
-				14A055AC16EEDE7E00352C72 /* Sources */,
-				14A055AD16EEDE7E00352C72 /* Frameworks */,
-				14A055AE16EEDE7E00352C72 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CPUMonitor;
-			productName = CPUMonitor;
-			productReference = 14A055B016EEDE7E00352C72 /* CPUMonitor.InnerSpace */;
-			productType = "com.apple.product-type.bundle";
-		};
 		14A327AF145C6F7D00BD4F94 /* InnerSpace */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14A327CE145C6F7E00BD4F94 /* Build configuration list for PBXNativeTarget "InnerSpace" */;
@@ -977,12 +746,7 @@
 			);
 			dependencies = (
 				1409650D16DDE13D0046127D /* PBXTargetDependency */,
-				14A055BE16EEDEE800352C72 /* PBXTargetDependency */,
-				1489D49B16E41D8E0079FC70 /* PBXTargetDependency */,
-				1489D47416E3F9C80079FC70 /* PBXTargetDependency */,
 				1489D45A16E3F3960079FC70 /* PBXTargetDependency */,
-				1489D44116E3F0D00079FC70 /* PBXTargetDependency */,
-				1489D42216E3EA280079FC70 /* PBXTargetDependency */,
 				1409650B16DDE1380046127D /* PBXTargetDependency */,
 				140964ED16DDD7D60046127D /* PBXTargetDependency */,
 				140964EF16DDD7D60046127D /* PBXTargetDependency */,
@@ -1019,12 +783,7 @@
 				140964C316DDD6560046127D /* Black */,
 				140964D616DDD78D0046127D /* Polyhedra */,
 				140964F716DDE06C0046127D /* Space */,
-				1489D40516E3E97A0079FC70 /* Spor */,
-				1489D42D16E3F0600079FC70 /* ItJustStopped */,
 				1489D44716E3F33B0079FC70 /* Boxes */,
-				1489D46016E3F97A0079FC70 /* NickSpace */,
-				1489D48A16E41D470079FC70 /* Qix */,
-				14A055AF16EEDE7E00352C72 /* CPUMonitor */,
 			);
 		};
 /* End PBXProject section */
@@ -1062,22 +821,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1489D40416E3E97A0079FC70 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1489D40D16E3E97A0079FC70 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1489D42C16E3F0600079FC70 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1489D43516E3F0610079FC70 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1489D44616E3F33B0079FC70 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1086,41 +829,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1489D45F16E3F97A0079FC70 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1489D46816E3F97B0079FC70 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1489D48916E41D470079FC70 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1489D49216E41D470079FC70 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		14A055AE16EEDE7E00352C72 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14A055B716EEDE7E00352C72 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		14A327AE145C6F7D00BD4F94 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14A055BC16EEDED200352C72 /* CPUMonitor.InnerSpace in Resources */,
-				1489D4A016E41E7C0079FC70 /* Qix.InnerSpace in Resources */,
-				1489D47516E3F9D10079FC70 /* NickSpace.InnerSpace in Resources */,
 				1489D45B16E3F39F0079FC70 /* Boxes.InnerSpace in Resources */,
 				1489D44316E3F0E90079FC70 /* PSOperations.framework in Resources */,
-				1489D44216E3F0DE0079FC70 /* ItJustStopped.InnerSpace in Resources */,
-				1489D42316E3EB830079FC70 /* Spor.InnerSpace in Resources */,
 				1409650E16DDE1FD0046127D /* Space.InnerSpace in Resources */,
 				140964F316DDD9910046127D /* Polyhedra.InnerSpace in Resources */,
 				140964F216DDD9850046127D /* Black.InnerSpace in Resources */,
@@ -1130,6 +844,7 @@
 				1409651016DE846F0046127D /* PreferencesPanel.xib in Resources */,
 				1402401616EC14A3005BDB19 /* InnerSpace_Icon.icns in Resources */,
 				14085DD216F8D8DB003B674D /* DefaultIcon.png in Resources */,
+				14A0BBBB178DF13F00A9BCF0 /* PreferencesPanelCellViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1169,58 +884,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1489D40216E3E97A0079FC70 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1489D42516E3EBA30079FC70 /* spordefs.m in Sources */,
-				1489D42616E3EBA90079FC70 /* SporView.m in Sources */,
-				1489D42716E3EBB30079FC70 /* sporen6.m in Sources */,
-				1489D42816E3EBBA0079FC70 /* draw.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1489D42A16E3F0600079FC70 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1489D43C16E3F0990079FC70 /* ItJustStoppedViewPart.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1489D44416E3F33B0079FC70 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1489D45616E3F3590079FC70 /* BoxesView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1489D45D16E3F97A0079FC70 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1489D47616E3F9FA0079FC70 /* NickSpaceView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1489D48716E41D470079FC70 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1489D49F16E41E440079FC70 /* QixView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		14A055AC16EEDE7E00352C72 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14A055C316EEE22100352C72 /* NSColorExtensions.m in Sources */,
-				14A055C716EEE27800352C72 /* loadave.c in Sources */,
-				14A055CE16EEE2D200352C72 /* Percentages.m in Sources */,
-				14A055CF16EEE2D200352C72 /* TimeMonColors.m in Sources */,
-				14A055D016EEE2D200352C72 /* TimeMonWraps.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1237,6 +905,7 @@
 				14085DD016F7F3B2003B674D /* ModuleTile.m in Sources */,
 				14085DD516F94561003B674D /* ISCollectionViewItem.m in Sources */,
 				14085DD816F9473A003B674D /* ModuleTileView.m in Sources */,
+				14A0BBBA178DF13F00A9BCF0 /* PreferencesPanelCellViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1273,26 +942,6 @@
 			target = 14183ABB16CDB44300959AD7 /* PSOperations */;
 			targetProxy = 1409650C16DDE13D0046127D /* PBXContainerItemProxy */;
 		};
-		1489D42016E3EA210079FC70 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 14183ABB16CDB44300959AD7 /* PSOperations */;
-			targetProxy = 1489D41F16E3EA210079FC70 /* PBXContainerItemProxy */;
-		};
-		1489D42216E3EA280079FC70 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1489D40516E3E97A0079FC70 /* Spor */;
-			targetProxy = 1489D42116E3EA280079FC70 /* PBXContainerItemProxy */;
-		};
-		1489D43E16E3F0C20079FC70 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 14183ABB16CDB44300959AD7 /* PSOperations */;
-			targetProxy = 1489D43D16E3F0C20079FC70 /* PBXContainerItemProxy */;
-		};
-		1489D44116E3F0D00079FC70 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1489D42D16E3F0600079FC70 /* ItJustStopped */;
-			targetProxy = 1489D44016E3F0D00079FC70 /* PBXContainerItemProxy */;
-		};
 		1489D45816E3F38E0079FC70 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 14183ABB16CDB44300959AD7 /* PSOperations */;
@@ -1302,31 +951,6 @@
 			isa = PBXTargetDependency;
 			target = 1489D44716E3F33B0079FC70 /* Boxes */;
 			targetProxy = 1489D45916E3F3960079FC70 /* PBXContainerItemProxy */;
-		};
-		1489D47216E3F9BD0079FC70 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 14183ABB16CDB44300959AD7 /* PSOperations */;
-			targetProxy = 1489D47116E3F9BD0079FC70 /* PBXContainerItemProxy */;
-		};
-		1489D47416E3F9C80079FC70 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1489D46016E3F97A0079FC70 /* NickSpace */;
-			targetProxy = 1489D47316E3F9C80079FC70 /* PBXContainerItemProxy */;
-		};
-		1489D49816E41D7B0079FC70 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 14183ABB16CDB44300959AD7 /* PSOperations */;
-			targetProxy = 1489D49716E41D7B0079FC70 /* PBXContainerItemProxy */;
-		};
-		1489D49B16E41D8E0079FC70 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1489D48A16E41D470079FC70 /* Qix */;
-			targetProxy = 1489D49A16E41D8E0079FC70 /* PBXContainerItemProxy */;
-		};
-		14A055BE16EEDEE800352C72 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 14A055AF16EEDE7E00352C72 /* CPUMonitor */;
-			targetProxy = 14A055BD16EEDEE800352C72 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1579,74 +1203,6 @@
 			};
 			name = Release;
 		};
-		1489D41016E3E97A0079FC70 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_WARN_EMPTY_BODY = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Spor/Spor-Prefix.pch";
-				INFOPLIST_FILE = "Spor/Spor-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = InnerSpace;
-			};
-			name = Debug;
-		};
-		1489D41116E3E97A0079FC70 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_WARN_EMPTY_BODY = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Spor/Spor-Prefix.pch";
-				INFOPLIST_FILE = "Spor/Spor-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = InnerSpace;
-			};
-			name = Release;
-		};
-		1489D43816E3F0610079FC70 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_WARN_EMPTY_BODY = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ItJustStopped/ItJustStopped-Prefix.pch";
-				INFOPLIST_FILE = "ItJustStopped/ItJustStopped-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = InnerSpace;
-			};
-			name = Debug;
-		};
-		1489D43916E3F0610079FC70 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_WARN_EMPTY_BODY = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ItJustStopped/ItJustStopped-Prefix.pch";
-				INFOPLIST_FILE = "ItJustStopped/ItJustStopped-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = InnerSpace;
-			};
-			name = Release;
-		};
 		1489D45216E3F33B0079FC70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1674,108 +1230,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Boxes/Boxes-Prefix.pch";
 				INFOPLIST_FILE = "Boxes/Boxes-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = InnerSpace;
-			};
-			name = Release;
-		};
-		1489D46B16E3F97B0079FC70 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_WARN_EMPTY_BODY = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NickSpace/NickSpace-Prefix.pch";
-				INFOPLIST_FILE = "NickSpace/NickSpace-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = InnerSpace;
-			};
-			name = Debug;
-		};
-		1489D46C16E3F97B0079FC70 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_WARN_EMPTY_BODY = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NickSpace/NickSpace-Prefix.pch";
-				INFOPLIST_FILE = "NickSpace/NickSpace-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = InnerSpace;
-			};
-			name = Release;
-		};
-		1489D49516E41D470079FC70 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_WARN_EMPTY_BODY = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Qix/Qix-Prefix.pch";
-				INFOPLIST_FILE = "Qix/Qix-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = InnerSpace;
-			};
-			name = Debug;
-		};
-		1489D49616E41D470079FC70 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_WARN_EMPTY_BODY = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Qix/Qix-Prefix.pch";
-				INFOPLIST_FILE = "Qix/Qix-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = InnerSpace;
-			};
-			name = Release;
-		};
-		14A055B916EEDE7E00352C72 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_WARN_EMPTY_BODY = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CPUMonitor/CPUMonitor-Prefix.pch";
-				INFOPLIST_FILE = "CPUMonitor/CPUMonitor-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = InnerSpace;
-			};
-			name = Debug;
-		};
-		14A055BA16EEDE7E00352C72 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_WARN_EMPTY_BODY = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CPUMonitor/CPUMonitor-Prefix.pch";
-				INFOPLIST_FILE = "CPUMonitor/CPUMonitor-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1901,56 +1355,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1489D40F16E3E97A0079FC70 /* Build configuration list for PBXNativeTarget "Spor" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1489D41016E3E97A0079FC70 /* Debug */,
-				1489D41116E3E97A0079FC70 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1489D43716E3F0610079FC70 /* Build configuration list for PBXNativeTarget "ItJustStopped" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1489D43816E3F0610079FC70 /* Debug */,
-				1489D43916E3F0610079FC70 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1489D45116E3F33B0079FC70 /* Build configuration list for PBXNativeTarget "Boxes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1489D45216E3F33B0079FC70 /* Debug */,
 				1489D45316E3F33B0079FC70 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1489D46A16E3F97B0079FC70 /* Build configuration list for PBXNativeTarget "NickSpace" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1489D46B16E3F97B0079FC70 /* Debug */,
-				1489D46C16E3F97B0079FC70 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1489D49416E41D470079FC70 /* Build configuration list for PBXNativeTarget "Qix" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1489D49516E41D470079FC70 /* Debug */,
-				1489D49616E41D470079FC70 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		14A055BB16EEDE7E00352C72 /* Build configuration list for PBXNativeTarget "CPUMonitor" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				14A055B916EEDE7E00352C72 /* Debug */,
-				14A055BA16EEDE7E00352C72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

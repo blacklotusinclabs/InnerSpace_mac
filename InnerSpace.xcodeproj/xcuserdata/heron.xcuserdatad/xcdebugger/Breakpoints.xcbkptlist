@@ -8,13 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "InnerSpace/PreferencesPanelController.m"
-         timestampString = "385440291.8544"
+         timestampString = "395188521.383692"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "319"
-         endingLineNumber = "319"
-         landmarkName = "-tableView:didClickTableColumn:"
-         landmarkType = "5">
+         startingLineNumber = "318"
+         endingLineNumber = "318">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -73,38 +71,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "InnerSpace/PreferencesPanelController.m"
-         timestampString = "385440291.8544"
+         timestampString = "395188521.383692"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "206"
-         endingLineNumber = "206"
+         startingLineNumber = "190"
+         endingLineNumber = "190"
+         landmarkName = "@implementation PreferencesPanelController"
+         landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "InnerSpace/PreferencesPanelController.m"
+         timestampString = "395188521.383692"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "150"
+         endingLineNumber = "150"
          landmarkName = "-selectSaver:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "InnerSpace/PreferencesPanelController.m"
-         timestampString = "385440291.8544"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "166"
-         endingLineNumber = "166"
-         landmarkName = "-selectScreenNotification:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "InnerSpace/PreferencesPanelController.m"
-         timestampString = "385440350.6001"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "137"
-         endingLineNumber = "137"
-         landmarkName = "-observeValueForKeyPath:ofObject:change:context:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

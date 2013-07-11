@@ -7,6 +7,7 @@
 //
 
 #import "PreferencesPanelController.h"
+#import "PreferencesPanelCellViewController.h"
 #import "ModuleView.h"
 #import "InnerSpaceController.h"
 #import "ScreensView.h"
@@ -19,14 +20,15 @@
     self = [super init];
     if(self)
     {
-        // Do nothing..
+        // Initialize
+        moduleArray = [[NSMutableArray alloc] initWithCapacity:10];
     }
     return self;
 }
 
 - (void) dealloc
 {
-    [tiles removeObserver:self forKeyPath:@"selectionIndexes"];
+    [moduleArray release];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [window performClose:nil];
     
@@ -44,7 +46,7 @@
 - (void) loadAllModules
 {
     NSDictionary *modules = [parentController modules];
-    NSArray *allKeys = [modules allKeys];
+    NSArray *allKeys = [[modules allKeys] sortedArrayUsingSelector:@selector(compare:)];
     NSRect sampleRect = NSMakeRect(0, 0, 1280, 800);
     
     for(NSString *moduleName in allKeys)
@@ -70,7 +72,7 @@
         }
         
         tile.moduleName = moduleName;
-        [tiles addObject:tile];
+        [moduleArray addObject:tile];
     }
 }
 
@@ -95,10 +97,12 @@
                                                  name:ScreensViewSelectedScreenNotification
                                                object:nil];
     
+    /*
     [tiles addObserver:self
             forKeyPath:@"selectionIndexes"
                options:NSKeyValueObservingOptionNew
                context:nil];
+    */
     
     [self loadAllModules];
 
@@ -107,28 +111,6 @@
     
 }
 
--(void)observeValueForKeyPath:(NSString *)keyPath
-                     ofObject:(id)object
-                       change:(NSDictionary *)change
-                      context:(void *)context
-{
-    if([keyPath isEqualTo:@"selectionIndexes"])
-    {
-        if([[tiles selectedObjects] count] > 0)
-        {
-            if ([[tiles selectedObjects] count] == 1)
-            {
-                ModuleTile *t = (ModuleTile *)
-                [[tiles selectedObjects] objectAtIndex:0];
-                NSLog(@"Only 1 selected: %@", t.moduleName);
-            }
-            else
-            {
-                // More than one selected - iterate if need be
-            }
-        }
-    }
-}
 
 - (void) handleNotification:(NSNotification *)notification
 {
@@ -139,6 +121,7 @@
     }
 }
 
+/*
 - (void)selectScreenNotification:(NSNotification *)notification
 {
     NSScreen *scr = [[notification object] screen];
@@ -154,6 +137,7 @@
     // NSLog(@"%@ %@ %ld",scr,moduleName,(unsigned long)index);
     
 }
+*/
 
 // interface callbacks
 - (void) selectSaver: (id)sender
@@ -282,14 +266,29 @@
 @implementation PreferencesPanelController (TableDelegateDataSource)
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
 {
-    return [[[parentController modules] allKeys] count];
+    return [moduleArray count];
 }
 
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+    PreferencesPanelCellViewController *cellViewController = [[PreferencesPanelCellViewController alloc] initWithNibName:@"PreferencesPanelCellViewController"
+                                                                                                                  bundle:nil];\
+    ModuleTile *tile = [moduleArray objectAtIndex:row];
+    NSView *view = cellViewController.view;
+    
+    cellViewController.image.image = tile.image;
+    cellViewController.description.stringValue = tile.moduleName;
+    
+    return view;
+}
+
+/*
 - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
 {
     NSArray *array = [[[parentController modules] allKeys] sortedArrayUsingSelector:@selector(compare:)];
     return [array objectAtIndex:rowIndex];
 }
+*/
 
 - (void)tableView:(NSTableView *)tableView didClickTableColumn:(NSTableColumn *)tableColumn
 {
