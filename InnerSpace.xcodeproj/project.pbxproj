@@ -28,6 +28,7 @@
 		1409650E16DDE1FD0046127D /* Space.InnerSpace in Resources */ = {isa = PBXBuildFile; fileRef = 140964F816DDE06C0046127D /* Space.InnerSpace */; };
 		1409651016DE846F0046127D /* PreferencesPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1409650F16DE846F0046127D /* PreferencesPanel.xib */; };
 		1409651316DEA8920046127D /* PreferencesPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1409651216DEA8920046127D /* PreferencesPanelController.m */; };
+		140ABD2B1791066B0076AC45 /* PSOperations.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14183ABC16CDB44300959AD7 /* PSOperations.framework */; };
 		14183ABD16CDB44300959AD7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A327B4145C6F7D00BD4F94 /* Cocoa.framework */; };
 		14183AC316CDB44300959AD7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14183AC116CDB44300959AD7 /* InfoPlist.strings */; };
 		14183ACB16CDB4AA00959AD7 /* PSOperators.h in Headers */ = {isa = PBXBuildFile; fileRef = 14E2F52A16B9D0BD0006A4B9 /* PSOperators.h */; };
@@ -37,7 +38,6 @@
 		141BFE0016F422E500DDD7BF /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141BFDFF16F422E400DDD7BF /* IOKit.framework */; };
 		1489D3FF16E3E6740079FC70 /* PolyhedraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140964E416DDD7AB0046127D /* PolyhedraView.m */; };
 		1489D40016E3E67F0079FC70 /* PolyhedraViewWraps.m in Sources */ = {isa = PBXBuildFile; fileRef = 140964E616DDD7AB0046127D /* PolyhedraViewWraps.m */; };
-		1489D44316E3F0E90079FC70 /* PSOperations.framework in Resources */ = {isa = PBXBuildFile; fileRef = 14183ABC16CDB44300959AD7 /* PSOperations.framework */; };
 		1489D44916E3F33B0079FC70 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A327B4145C6F7D00BD4F94 /* Cocoa.framework */; };
 		1489D44F16E3F33B0079FC70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1489D44D16E3F33B0079FC70 /* InfoPlist.strings */; };
 		1489D45616E3F3590079FC70 /* BoxesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1489D45516E3F3590079FC70 /* BoxesView.m */; };
@@ -112,6 +112,19 @@
 			remoteInfo = Boxes;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		140ABD2A179106580076AC45 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				140ABD2B1791066B0076AC45 /* PSOperations.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1402401516EC14A3005BDB19 /* InnerSpace_Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = InnerSpace_Icon.icns; path = InnerSpace/InnerSpace_Icon.icns; sourceTree = "<group>"; };
@@ -741,6 +754,7 @@
 				14A327AC145C6F7D00BD4F94 /* Sources */,
 				14A327AD145C6F7D00BD4F94 /* Frameworks */,
 				14A327AE145C6F7D00BD4F94 /* Resources */,
+				140ABD2A179106580076AC45 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -834,7 +848,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1489D45B16E3F39F0079FC70 /* Boxes.InnerSpace in Resources */,
-				1489D44316E3F0E90079FC70 /* PSOperations.framework in Resources */,
 				1409650E16DDE1FD0046127D /* Space.InnerSpace in Resources */,
 				140964F316DDD9910046127D /* Polyhedra.InnerSpace in Resources */,
 				140964F216DDD9850046127D /* Black.InnerSpace in Resources */,

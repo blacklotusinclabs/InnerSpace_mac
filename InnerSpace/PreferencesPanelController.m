@@ -11,6 +11,7 @@
 #import "ModuleView.h"
 #import "InnerSpaceController.h"
 #import "ScreensView.h"
+#import "ScreenButton.h"
 #import "ModuleTile.h"
 
 @implementation PreferencesPanelController
@@ -121,38 +122,46 @@
     }
 }
 
-/*
+
 - (void)selectScreenNotification:(NSNotification *)notification
 {
+    NSMutableDictionary *modules = [parentController modules];
+    NSArray *array = [[modules allKeys] sortedArrayUsingSelector:@selector(compare:)];
     NSScreen *scr = [[notification object] screen];
     NSNumber *screenId = [[scr deviceDescription] objectForKey:@"NSScreenNumber"];
     NSString *screenKey = [NSString stringWithFormat:@"currentModule_%@",screenId];
     NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
     NSString *moduleName = [defs objectForKey:screenKey];
-    NSUInteger index = [[[parentController modules] allKeys] indexOfObject:moduleName];
+    NSUInteger index = [array indexOfObject:moduleName];
+    NSLog(@"%@ %@ %ld",scr,moduleName,(unsigned long)index);
     
-    [tiles setSelectedObjects:[NSArray array]];
-    [tiles setSelectionIndex:index];
+    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:index];
+    [modulesTableView selectRowIndexes:indexSet byExtendingSelection:NO];
+    [modulesTableView scrollRowToVisible:index];
     
-    // NSLog(@"%@ %@ %ld",scr,moduleName,(unsigned long)index);
-    
+    ScreenButton *button = (ScreenButton *)[notification object];
+    screen = [button screen];
 }
-*/
 
 // interface callbacks
 - (void) selectSaver: (id)sender
 {
-    /*
-    NSInteger row = [moduleList selectedRow];
+    if(screen == nil)
+    {
+        NSRunAlertPanel(@"Please select a screen", @"You must select a screen to change the background.", @"Ok", nil, nil);
+        return;
+    }
+    
+    NSInteger row = [modulesTableView selectedRow];
     NSMutableDictionary *modules = [parentController modules];
     
     if(row >= 0)
     {
         NSArray *array = [[modules allKeys] sortedArrayUsingSelector:@selector(compare:)];
-        NSString *module = [array objectAtIndex:row];
+        NSString *moduleName = [array objectAtIndex:row];
         NSNumber *screenId = [[screen deviceDescription] objectForKey:@"NSScreenNumber"];
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-        [dict setObject:module forKey:@"module"];
+        [dict setObject:moduleName forKey:@"module"];
         [dict setObject:screenId forKey:@"screen"];
         
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -164,8 +173,7 @@
          object:nil
          userInfo:dict];
     }
-     */
-    NSLog(@"Selected");
+    NSLog(@"Selected %ld",row);
 }
 
 /*

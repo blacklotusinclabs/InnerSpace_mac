@@ -16,7 +16,8 @@ NSString *ScreensViewSelectedScreenNotification = @"ScreensViewSelectedScreenNot
 - (id)initWithFrame:(NSRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self) {
+    if (self != nil)
+    {
         CGFloat xpos = 0.0;
         CGFloat totalWidth = 0.0;
         
@@ -50,6 +51,15 @@ NSString *ScreensViewSelectedScreenNotification = @"ScreensViewSelectedScreenNot
     return self;
 }
 
+/*
+- (void)awakeFromNib
+{
+    // Select first view...
+    ScreenButton *button = (ScreenButton *)[[self subviews] objectAtIndex:0];
+    [self screenSelected:button];
+}
+ */
+
 - (void)drawRect:(NSRect)dirtyRect
 {
     [[NSColor lightGrayColor] set];
@@ -65,5 +75,16 @@ NSString *ScreensViewSelectedScreenNotification = @"ScreensViewSelectedScreenNot
     [[NSNotificationCenter defaultCenter] postNotificationName:ScreensViewSelectedScreenNotification
                                                         object:sender
                                                       userInfo:info];
+    
+    [sender setIsSelected:YES]; // setBackgroundColor:[NSColor orangeColor]];
+    NSArray *subviews = [self subviews];
+    for(ScreenButton *button in subviews)
+    {
+        if(button != sender)
+        {
+            [button setIsSelected:NO];
+        }
+    }
+    [self setNeedsDisplay:YES];
 }
 @end

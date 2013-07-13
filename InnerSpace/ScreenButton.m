@@ -13,6 +13,8 @@ static void KeyArrayCallback(const void* key, const void* value, void* context) 
 
 @implementation ScreenButton
 
+@synthesize isSelected = isSelected;
+
 + (NSString*)localizedScreenName:(NSScreen *)screen
 {
     NSDictionary* screenDictionary = [screen deviceDescription];
@@ -75,6 +77,11 @@ static void KeyArrayCallback(const void* key, const void* value, void* context) 
 - (void)drawRect:(NSRect)dirtyRect
 {
     [super drawRect:dirtyRect];
+    if(isSelected)
+    {
+        [[NSColor redColor] set];
+        NSFrameRectWithWidth(dirtyRect, 3.0);
+    }
     //[[NSColor blueColor] set];
     //NSRectFill(dirtyRect);
     //[[NSColor blackColor] set];

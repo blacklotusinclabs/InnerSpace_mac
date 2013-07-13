@@ -47,7 +47,7 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{120, 65}, {416, 620}}</string>
 				<int key="NSWTFlags">1685586944</int>
-				<string key="NSWindowTitle">InnerSpace</string>
+				<string key="NSWindowTitle">InnerSpace Preferences</string>
 				<string key="NSWindowClass">NSPanel</string>
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
@@ -68,6 +68,7 @@
 									<string key="NSFrame">{{1, 1}, {386, 191}}</string>
 									<reference key="NSSuperview" ref="796954118"/>
 									<reference key="NSWindow"/>
+									<reference key="NSNextKeyView"/>
 									<string key="NSReuseIdentifierKey">_NS:11</string>
 								</object>
 							</array>
@@ -329,6 +330,7 @@
 						<string key="NSFrame">{{134, 91}, {104, 17}}</string>
 						<reference key="NSSuperview" ref="1027114834"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:1535</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="899752331">
@@ -387,6 +389,22 @@
 						<reference key="destination" ref="796954118"/>
 					</object>
 					<int key="connectionID">110</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">modulesTableView</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="1021123120"/>
+					</object>
+					<int key="connectionID">605</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">selectSaver:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="1021123120"/>
+					</object>
+					<int key="connectionID">606</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -618,7 +636,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">604</int>
+			<int key="maxID">606</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

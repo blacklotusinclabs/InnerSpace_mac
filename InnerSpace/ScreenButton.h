@@ -11,7 +11,10 @@
 @interface ScreenButton : NSButton
 {
     NSScreen *screen_;
+    BOOL isSelected;
 }
+
+@property (nonatomic,assign) BOOL isSelected;
 
 - (id) initWithScreen:(NSScreen *)screen;
 - (NSScreen *)screen;
