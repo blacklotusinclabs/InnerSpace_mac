@@ -29,6 +29,11 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+		<key>Neko.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
 		<key>NickSpace.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -98,6 +103,16 @@
 			<true/>
 		</dict>
 		<key>145434A716C0A8C900451337</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>146B851D17AABD3A0044594A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>146B854117AB09870044594A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

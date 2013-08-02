@@ -75,7 +75,8 @@ extern CGFloat randBetween(CGFloat lower, CGFloat upper);
   
   BOOL		noAnimation;
   NSInteger		backStep;
-  id            inspectorPanel;
+  IBOutlet id   inspectorPanel;
+  IBOutlet NSMatrix *selectionMatrix;
 }
 
 - (void) oneStep;
@@ -88,8 +89,9 @@ extern CGFloat randBetween(CGFloat lower, CGFloat upper);
 - erasePolyhedron;
 - frameChanged:(NSRect)frameRect;
 
-- setSelectedIndex:sender;
-- kickIt:sender;
+- (IBAction)setSelectedIndex:sender;
+- (IBAction)kickIt:sender;
 - inspector:sender;
+- (NSImage *)preview;
 
 @end

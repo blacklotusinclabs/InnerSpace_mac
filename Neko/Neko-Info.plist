@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string>Black</string>
+	<string></string>
 	<key>CFBundleIdentifier</key>
 	<string>com.openlogiccorp.InnerSpace</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -25,6 +25,6 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2013 Open Logic Corporation. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
-	<string>BlackView</string>
+	<string>NekoView</string>
 </dict>
 </plist>

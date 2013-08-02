@@ -6,6 +6,7 @@
 #import "InnerSpaceController.h"
 #import "ModuleView.h"
 #import "PreferencesPanelController.h"
+#import "Constants.h"
 
 #define TIME 0.10
 
@@ -42,7 +43,7 @@ void DisplayReconfigurationCallBack (CGDirectDisplayID display,
         // Add observer...
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(handleNotification:)
-                                                     name:@"ISSelectSaverForScreeNotification"
+                                                     name:ISSelectSaverForScreenNotification
                                                    object:nil];
         
         // Find all modules and refresh every five minutes...
@@ -351,6 +352,8 @@ void DisplayReconfigurationCallBack (CGDirectDisplayID display,
                 [currentModule didLockFocus];
             }
             [currentModule oneStep];
+            NSGraphicsContext* aContext = [NSGraphicsContext currentContext];
+            [aContext flushGraphics];
             NSEnumerator *en = [screensToWindows keyEnumerator];
             NSDictionary *key = nil;
             
@@ -400,6 +403,9 @@ void DisplayReconfigurationCallBack (CGDirectDisplayID display,
             [currentModule didLockFocus];
         }
         [currentModule oneStep];
+        NSGraphicsContext* aContext = [NSGraphicsContext currentContext];
+        [aContext flushGraphics];
+        
         [[currentModule window] flushWindow];
         [currentModule unlockFocus];
     }
@@ -466,43 +472,6 @@ void DisplayReconfigurationCallBack (CGDirectDisplayID display,
     [self findModules];
 }
 
-- (void) _startModule: (ModuleView *)moduleView
-{
-    NS_DURING
-    {
-        [[NSNotificationCenter defaultCenter]
-         postNotificationName:@"ISStateModuleNotification" object:self];
-        [self createSaverWindow: YES];
-        [self startTimer:moduleView];
-    }
-    NS_HANDLER
-    {
-        NSLog(@"EXCEPTION: %@",localException);
-    }
-    NS_ENDHANDLER;
-}
-
-- (void) _stopModule: (ModuleView *)moduleView
-{
-    NS_DURING
-    {
-        if([moduleView respondsToSelector: @selector(inspectorWillBeRemoved)])
-        {
-            [moduleView inspectorWillBeRemoved];
-        }
-        [self stopSaver];
-    }
-    NS_HANDLER
-    {
-        NSLog(@"EXCEPTION while in _stopModule: %@",localException);
-    }
-    NS_ENDHANDLER
-    
-    // Remove the view...
-    // [(NSBox *)controlsView setContentView: emptyView];
-    // [(NSBox *)controlsView setBorderType: NSGrooveBorder];
-}
-
 - (NSString *) _pathForModule: (NSString *) moduleName
 {
     NSString *result = nil;
@@ -546,8 +515,8 @@ void DisplayReconfigurationCallBack (CGDirectDisplayID display,
     if(newModule)
     {
         // [self createSaverWindow: newModule];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"ISModuleChangedNotification"
-                                                            object:self];
+        [[NSNotificationCenter defaultCenter] postNotificationName:ISModuleChangedNotification
+                                                            object:newModule];
     }
     
     return newModule;

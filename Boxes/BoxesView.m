@@ -21,6 +21,11 @@
   // NSRectFill(rects);
 }
 
+- (NSImage *)preview
+{
+    return [NSImage imageNamed:@"Boxes"];
+}
+
 - (void)oneStep
 {
   float x = 0, y = 0, w = 0, h = 0;

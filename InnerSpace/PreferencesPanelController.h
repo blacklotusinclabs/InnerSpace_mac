@@ -32,7 +32,7 @@
     BOOL isInBackground;
     
     NSScreen *screen;
-    NSString *currentModuleName;
+    // NSString *currentModuleName;
     id module;
     
     InnerSpaceController *parentController;
@@ -52,6 +52,5 @@
 
 - (void) setParentController:(InnerSpaceController *)controller;
 - (InnerSpaceController *)parentController;
-- (NSString *)moduleNameForScreen:(NSScreen *)screen;
 
 @end

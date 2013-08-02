@@ -318,6 +318,24 @@ static NSInteger faceColour[NUM_POLYHEDRA][MAX_NUM_FACES] =
 
 @implementation PolyhedraView
 
+- (id)initWithFrame:(NSRect)frameRect
+{
+    self = [super initWithFrame:frameRect];
+    if(self)
+    {
+        selectedIndex = -1;
+        [self useNewFrame:frameRect];
+        srand((unsigned int)time(0));
+    }
+    return self;
+}
+
+
+- (NSImage *)preview
+{
+    return [NSImage imageNamed:@"Polyhedra"];
+}
+
 // Distance between two points.  Inlined for efficiency.
 CGFloat distance(CGFloat xcrd, CGFloat ycrd, CGFloat zcrd);
 
@@ -793,14 +811,6 @@ CGFloat distance(CGFloat xcrd, CGFloat ycrd, CGFloat zcrd)
     [self frameChanged: frameRect];
 }
 
-- initWithFrame:(NSRect)frameRect
-{
-    [super initWithFrame: frameRect];	
-    [self useNewFrame:frameRect];
-    srand((unsigned int)time(0));
-    return self;
-}
-
 - useNewFrame:(NSRect)frameRect
 {
     NSInteger		i, j, k;
@@ -808,10 +818,16 @@ CGFloat distance(CGFloat xcrd, CGFloat ycrd, CGFloat zcrd)
     BOOL	foundVertex;
     
     // Decide which Polyhedron.
-    if (selectedIndex == 0)	polyhedron   = random() % 5;
-    else	polyhedron = selectedIndex-1;
-    
-    polyhedron = 3;
+    if (selectedIndex == -1)
+    {
+        polyhedron   = random() % 5;
+        selectedIndex = polyhedron;
+        [selectionMatrix selectCellAtRow:polyhedron column:0];
+    }
+    else
+    {
+        polyhedron = selectedIndex;
+    }
     
     numVertices  = theNumVertices[polyhedron];
     numAdjacents = theNumAdjacents[polyhedron];
@@ -875,20 +891,20 @@ CGFloat distance(CGFloat xcrd, CGFloat ycrd, CGFloat zcrd)
     return self;
 }
 
-- setSelectedIndex:sender
+- (IBAction)setSelectedIndex:sender
 {
     NSInteger val;
     val = [sender selectedRow];
     // NSLog(@"val = %d",val);
-    if (selectedIndex == val) return self;
+    if (selectedIndex == val) return;//  self;
     
     selectedIndex = val;
     [self frameChanged: [self bounds]];
     [self display];
-    return self;
+    // return self;
 }
 
-- (id)kickIt: (id)sender
+- (IBAction)kickIt: (id)sender
 {
     NSInteger i;
     CGFloat	x,y,z;
@@ -903,14 +919,14 @@ CGFloat distance(CGFloat xcrd, CGFloat ycrd, CGFloat zcrd)
         vertices[i].vel.y += y;
         vertices[i].vel.z += z;
     }
-    return self;
+    // return self;
 }
 
 - (id)inspector: (id)sender
 {
     if (!inspectorPanel)
     {
-        if(![NSBundle loadNibNamed: @"Polyhedra" owner:self])
+        if(![NSBundle loadNibNamed: @"PolyhedraViewInspector" owner:self])
         {
             NSLog(@"Failed to load");
         }

@@ -480,6 +480,11 @@ void doSeg(float x1, float y1, float x2, float y2)
     }		
 }
 
+- (NSImage *)preview
+{
+    return [NSImage imageNamed:@"NickSpace"];
+}
+
 -(id)initWithFrame:(NSRect)frameRect
 {
   NSString *defaults = @"{\"spacing\" = \"\"; \"tcRatio\" = \"\"; \"tlRatio\" = \"\";}";

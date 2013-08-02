@@ -8,22 +8,22 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "InnerSpace/PreferencesPanelController.m"
-         timestampString = "395382511.966117"
+         timestampString = "397083796.82649"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "326"
-         endingLineNumber = "326">
+         startingLineNumber = "288"
+         endingLineNumber = "288">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "InnerSpace/InnerSpaceController.m"
-         timestampString = "384603212.76204"
+         timestampString = "395456409.948066"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "230"
-         endingLineNumber = "230"
+         startingLineNumber = "231"
+         endingLineNumber = "231"
          landmarkName = "-createSaverWindow:forScreen:withModuleNamed:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -32,11 +32,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Polyhedra/PolyhedraView.m"
-         timestampString = "384603828.614946"
+         timestampString = "397070685.734794"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "558"
-         endingLineNumber = "558"
+         startingLineNumber = "576"
+         endingLineNumber = "576"
          landmarkName = "-erasePolyhedron"
          landmarkType = "5">
       </FileBreakpoint>
@@ -45,11 +45,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Boxes/BoxesView.m"
-         timestampString = "384603926.331675"
+         timestampString = "397070685.734794"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "26"
-         endingLineNumber = "26"
+         startingLineNumber = "31"
+         endingLineNumber = "31"
          landmarkName = "-oneStep"
          landmarkType = "5">
       </FileBreakpoint>
@@ -70,26 +70,13 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "InnerSpace/PreferencesPanelController.m"
-         timestampString = "395382511.966117"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "303"
-         endingLineNumber = "303"
-         landmarkName = "-tableView:didClickTableColumn:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "InnerSpace/InnerSpaceController.m"
-         timestampString = "395382106.990166"
+         timestampString = "397120372.632554"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "81"
-         endingLineNumber = "81"
-         landmarkName = "-handleNotification:"
+         startingLineNumber = "276"
+         endingLineNumber = "276"
+         landmarkName = "-startSaver"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

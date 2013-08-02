@@ -29,6 +29,8 @@
 		1409651016DE846F0046127D /* PreferencesPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1409650F16DE846F0046127D /* PreferencesPanel.xib */; };
 		1409651316DEA8920046127D /* PreferencesPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1409651216DEA8920046127D /* PreferencesPanelController.m */; };
 		140ABD2B1791066B0076AC45 /* PSOperations.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14183ABC16CDB44300959AD7 /* PSOperations.framework */; };
+		140ABD2E17922CD40076AC45 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 140ABD2D17922CD40076AC45 /* Constants.m */; };
+		140ABD311792334D0076AC45 /* PolyhedraViewInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 140ABD2F179233300076AC45 /* PolyhedraViewInspector.xib */; };
 		14183ABD16CDB44300959AD7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A327B4145C6F7D00BD4F94 /* Cocoa.framework */; };
 		14183AC316CDB44300959AD7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14183AC116CDB44300959AD7 /* InfoPlist.strings */; };
 		14183ACB16CDB4AA00959AD7 /* PSOperators.h in Headers */ = {isa = PBXBuildFile; fileRef = 14E2F52A16B9D0BD0006A4B9 /* PSOperators.h */; };
@@ -36,6 +38,24 @@
 		141BFDFB16F2A38B00DDD7BF /* ScreensView.m in Sources */ = {isa = PBXBuildFile; fileRef = 141BFDFA16F2A38B00DDD7BF /* ScreensView.m */; };
 		141BFDFE16F2A5A600DDD7BF /* ScreenButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 141BFDFD16F2A5A600DDD7BF /* ScreenButton.m */; };
 		141BFE0016F422E500DDD7BF /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141BFDFF16F422E400DDD7BF /* IOKit.framework */; };
+		146B851F17AABD3A0044594A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A327B4145C6F7D00BD4F94 /* Cocoa.framework */; };
+		146B852517AABD3B0044594A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 146B852317AABD3B0044594A /* InfoPlist.strings */; };
+		146B852A17AABDB40044594A /* NickSpaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1489D46E16E3F9A10079FC70 /* NickSpaceView.m */; };
+		146B852F17AABE2C0044594A /* PSOperations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14183ABC16CDB44300959AD7 /* PSOperations.framework */; };
+		146B853017AABE5A0044594A /* NickSpace.InnerSpace in Resources */ = {isa = PBXBuildFile; fileRef = 146B851E17AABD3A0044594A /* NickSpace.InnerSpace */; };
+		146B853717AACECD0044594A /* Space.png in Resources */ = {isa = PBXBuildFile; fileRef = 146B853517AACEC00044594A /* Space.png */; };
+		146B853817AACED40044594A /* Boxes.png in Resources */ = {isa = PBXBuildFile; fileRef = 146B853317AACEB00044594A /* Boxes.png */; };
+		146B853C17AACEF80044594A /* Polyhedra.png in Resources */ = {isa = PBXBuildFile; fileRef = 146B853A17AACEF10044594A /* Polyhedra.png */; };
+		146B853D17AAD0050044594A /* NickSpace.png in Resources */ = {isa = PBXBuildFile; fileRef = 146B853117AACE9E0044594A /* NickSpace.png */; };
+		146B854317AB09870044594A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A327B4145C6F7D00BD4F94 /* Cocoa.framework */; };
+		146B854917AB09870044594A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 146B854717AB09870044594A /* InfoPlist.strings */; };
+		146B855917AB93260044594A /* Neko.InnerSpace in Resources */ = {isa = PBXBuildFile; fileRef = 146B854217AB09870044594A /* Neko.InnerSpace */; };
+		146B855C17AB94420044594A /* NekoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 146B855217AB09CA0044594A /* NekoView.m */; };
+		146B855D17AB94470044594A /* blackcat.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 146B854E17AB09CA0044594A /* blackcat.tiff */; };
+		146B855E17AB944C0044594A /* browncat.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 146B854F17AB09CA0044594A /* browncat.tiff */; };
+		146B855F17AB94510044594A /* nekoInfo.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 146B855017AB09CA0044594A /* nekoInfo.tiff */; };
+		146B856017AB94560044594A /* whitecat.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 146B855317AB09CA0044594A /* whitecat.tiff */; };
+		146B856317AB94E20044594A /* PSOperations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14183ABC16CDB44300959AD7 /* PSOperations.framework */; };
 		1489D3FF16E3E6740079FC70 /* PolyhedraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140964E416DDD7AB0046127D /* PolyhedraView.m */; };
 		1489D40016E3E67F0079FC70 /* PolyhedraViewWraps.m in Sources */ = {isa = PBXBuildFile; fileRef = 140964E616DDD7AB0046127D /* PolyhedraViewWraps.m */; };
 		1489D44916E3F33B0079FC70 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A327B4145C6F7D00BD4F94 /* Cocoa.framework */; };
@@ -91,6 +111,34 @@
 			remoteInfo = Space;
 		};
 		1409650C16DDE13D0046127D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A327A7145C6F7D00BD4F94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14183ABB16CDB44300959AD7;
+			remoteInfo = PSOperations;
+		};
+		146B852B17AABDFF0044594A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A327A7145C6F7D00BD4F94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 146B851D17AABD3A0044594A;
+			remoteInfo = NickSpace;
+		};
+		146B852D17AABE100044594A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A327A7145C6F7D00BD4F94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14183ABB16CDB44300959AD7;
+			remoteInfo = PSOperations;
+		};
+		146B855A17AB93380044594A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A327A7145C6F7D00BD4F94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 146B854117AB09870044594A;
+			remoteInfo = Neko;
+		};
+		146B856117AB94DB0044594A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 14A327A7145C6F7D00BD4F94 /* Project object */;
 			proxyType = 1;
@@ -159,6 +207,9 @@
 		1409650F16DE846F0046127D /* PreferencesPanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PreferencesPanel.xib; path = InnerSpace/PreferencesPanel.xib; sourceTree = "<group>"; };
 		1409651116DEA8920046127D /* PreferencesPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesPanelController.h; sourceTree = "<group>"; };
 		1409651216DEA8920046127D /* PreferencesPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesPanelController.m; sourceTree = "<group>"; };
+		140ABD2C17922CD30076AC45 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		140ABD2D17922CD40076AC45 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		140ABD2F179233300076AC45 /* PolyhedraViewInspector.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PolyhedraViewInspector.xib; sourceTree = "<group>"; };
 		14183ABC16CDB44300959AD7 /* PSOperations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PSOperations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14183AC016CDB44300959AD7 /* PSOperations-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PSOperations-Info.plist"; sourceTree = "<group>"; };
 		14183AC216CDB44300959AD7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -168,6 +219,24 @@
 		141BFDFC16F2A5A600DDD7BF /* ScreenButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenButton.h; sourceTree = "<group>"; };
 		141BFDFD16F2A5A600DDD7BF /* ScreenButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenButton.m; sourceTree = "<group>"; };
 		141BFDFF16F422E400DDD7BF /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		146B851E17AABD3A0044594A /* NickSpace.InnerSpace */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NickSpace.InnerSpace; sourceTree = BUILT_PRODUCTS_DIR; };
+		146B852217AABD3B0044594A /* NickSpace-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NickSpace-Info.plist"; sourceTree = "<group>"; };
+		146B852417AABD3B0044594A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		146B852617AABD3B0044594A /* NickSpace-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NickSpace-Prefix.pch"; sourceTree = "<group>"; };
+		146B853117AACE9E0044594A /* NickSpace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NickSpace.png; sourceTree = "<group>"; };
+		146B853317AACEB00044594A /* Boxes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boxes.png; sourceTree = "<group>"; };
+		146B853517AACEC00044594A /* Space.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Space.png; sourceTree = "<group>"; };
+		146B853A17AACEF10044594A /* Polyhedra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Polyhedra.png; sourceTree = "<group>"; };
+		146B854217AB09870044594A /* Neko.InnerSpace */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Neko.InnerSpace; sourceTree = BUILT_PRODUCTS_DIR; };
+		146B854617AB09870044594A /* Neko-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Neko-Info.plist"; sourceTree = "<group>"; };
+		146B854817AB09870044594A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		146B854A17AB09870044594A /* Neko-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Neko-Prefix.pch"; sourceTree = "<group>"; };
+		146B854E17AB09CA0044594A /* blackcat.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = blackcat.tiff; sourceTree = "<group>"; };
+		146B854F17AB09CA0044594A /* browncat.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = browncat.tiff; sourceTree = "<group>"; };
+		146B855017AB09CA0044594A /* nekoInfo.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = nekoInfo.tiff; sourceTree = "<group>"; };
+		146B855117AB09CA0044594A /* NekoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NekoView.h; sourceTree = "<group>"; };
+		146B855217AB09CA0044594A /* NekoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NekoView.m; sourceTree = "<group>"; };
+		146B855317AB09CA0044594A /* whitecat.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = whitecat.tiff; sourceTree = "<group>"; };
 		1489D40A16E3E97A0079FC70 /* Spor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Spor-Info.plist"; sourceTree = "<group>"; };
 		1489D40C16E3E97A0079FC70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1489D40E16E3E97A0079FC70 /* Spor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spor-Prefix.pch"; sourceTree = "<group>"; };
@@ -179,7 +248,6 @@
 		1489D41816E3E9C30079FC70 /* sporen6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sporen6.m; sourceTree = "<group>"; };
 		1489D41B16E3E9E10079FC70 /* SporView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SporView.h; sourceTree = "<group>"; };
 		1489D41C16E3E9E10079FC70 /* SporView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SporView.m; sourceTree = "<group>"; };
-		1489D41D16E3E9E10079FC70 /* Thinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thinker.h; sourceTree = "<group>"; };
 		1489D43216E3F0610079FC70 /* ItJustStopped-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ItJustStopped-Info.plist"; sourceTree = "<group>"; };
 		1489D43416E3F0610079FC70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1489D43616E3F0610079FC70 /* ItJustStopped-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ItJustStopped-Prefix.pch"; sourceTree = "<group>"; };
@@ -273,6 +341,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		146B851B17AABD3A0044594A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146B852F17AABE2C0044594A /* PSOperations.framework in Frameworks */,
+				146B851F17AABD3A0044594A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146B853F17AB09870044594A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146B856317AB94E20044594A /* PSOperations.framework in Frameworks */,
+				146B854317AB09870044594A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1489D44516E3F33B0079FC70 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -298,6 +384,7 @@
 		140964AD16DDD5C80046127D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				146B854417AB09870044594A /* Neko */,
 				14A055B216EEDE7E00352C72 /* CPUMonitor */,
 				1489D48D16E41D470079FC70 /* Qix */,
 				1489D46316E3F97A0079FC70 /* NickSpace */,
@@ -355,9 +442,11 @@
 		140964DA16DDD78E0046127D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				146B853A17AACEF10044594A /* Polyhedra.png */,
 				140964DB16DDD78E0046127D /* Polyhedra-Info.plist */,
 				140964DC16DDD78E0046127D /* InfoPlist.strings */,
 				140964DF16DDD78E0046127D /* Polyhedra-Prefix.pch */,
+				140ABD2F179233300076AC45 /* PolyhedraViewInspector.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -375,6 +464,7 @@
 		140964FB16DDE06C0046127D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				146B853517AACEC00044594A /* Space.png */,
 				140964FC16DDE06C0046127D /* Space-Info.plist */,
 				140964FD16DDE06C0046127D /* InfoPlist.strings */,
 				1409650016DDE06C0046127D /* Space-Prefix.pch */,
@@ -418,6 +508,8 @@
 				14A0BBB7178DF13F00A9BCF0 /* PreferencesPanelCellViewController.h */,
 				14A0BBB8178DF13F00A9BCF0 /* PreferencesPanelCellViewController.m */,
 				14A0BBB9178DF13F00A9BCF0 /* PreferencesPanelCellViewController.xib */,
+				140ABD2C17922CD30076AC45 /* Constants.h */,
+				140ABD2D17922CD40076AC45 /* Constants.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -442,12 +534,53 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		146B852017AABD3A0044594A /* NickSpace */ = {
+			isa = PBXGroup;
+			children = (
+				146B852117AABD3B0044594A /* Supporting Files */,
+			);
+			path = NickSpace;
+			sourceTree = "<group>";
+		};
+		146B852117AABD3B0044594A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				146B852217AABD3B0044594A /* NickSpace-Info.plist */,
+				146B852317AABD3B0044594A /* InfoPlist.strings */,
+				146B852617AABD3B0044594A /* NickSpace-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		146B854417AB09870044594A /* Neko */ = {
+			isa = PBXGroup;
+			children = (
+				146B855117AB09CA0044594A /* NekoView.h */,
+				146B855217AB09CA0044594A /* NekoView.m */,
+				146B854517AB09870044594A /* Supporting Files */,
+			);
+			path = Neko;
+			sourceTree = "<group>";
+		};
+		146B854517AB09870044594A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				146B854E17AB09CA0044594A /* blackcat.tiff */,
+				146B854F17AB09CA0044594A /* browncat.tiff */,
+				146B855017AB09CA0044594A /* nekoInfo.tiff */,
+				146B855317AB09CA0044594A /* whitecat.tiff */,
+				146B854617AB09870044594A /* Neko-Info.plist */,
+				146B854717AB09870044594A /* InfoPlist.strings */,
+				146B854A17AB09870044594A /* Neko-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		1489D40816E3E97A0079FC70 /* Spor */ = {
 			isa = PBXGroup;
 			children = (
 				1489D41B16E3E9E10079FC70 /* SporView.h */,
 				1489D41C16E3E9E10079FC70 /* SporView.m */,
-				1489D41D16E3E9E10079FC70 /* Thinker.h */,
 				1489D41516E3E9C30079FC70 /* spordefs.h */,
 				1489D41616E3E9C30079FC70 /* spordefs.m */,
 				1489D41716E3E9C30079FC70 /* sporen6.h */,
@@ -502,6 +635,7 @@
 		1489D44B16E3F33B0079FC70 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				146B853317AACEB00044594A /* Boxes.png */,
 				1489D44C16E3F33B0079FC70 /* Boxes-Info.plist */,
 				1489D44D16E3F33B0079FC70 /* InfoPlist.strings */,
 				1489D45016E3F33B0079FC70 /* Boxes-Prefix.pch */,
@@ -522,6 +656,7 @@
 		1489D46416E3F97A0079FC70 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				146B853117AACE9E0044594A /* NickSpace.png */,
 				1489D46516E3F97A0079FC70 /* NickSpace-Info.plist */,
 				1489D46616E3F97B0079FC70 /* InfoPlist.strings */,
 				1489D46916E3F97B0079FC70 /* NickSpace-Prefix.pch */,
@@ -584,6 +719,7 @@
 				140964AD16DDD5C80046127D /* Modules */,
 				14A327BA145C6F7D00BD4F94 /* InnerSpace */,
 				14A327BB145C6F7D00BD4F94 /* Supporting Files */,
+				146B852017AABD3A0044594A /* NickSpace */,
 				14A327B3145C6F7D00BD4F94 /* Frameworks */,
 				14A327B1145C6F7D00BD4F94 /* Products */,
 			);
@@ -598,6 +734,8 @@
 				140964D716DDD78D0046127D /* Polyhedra.InnerSpace */,
 				140964F816DDE06C0046127D /* Space.InnerSpace */,
 				1489D44816E3F33B0079FC70 /* Boxes.InnerSpace */,
+				146B851E17AABD3A0044594A /* NickSpace.InnerSpace */,
+				146B854217AB09870044594A /* Neko.InnerSpace */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -729,6 +867,42 @@
 			productReference = 14183ABC16CDB44300959AD7 /* PSOperations.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		146B851D17AABD3A0044594A /* NickSpace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 146B852717AABD3B0044594A /* Build configuration list for PBXNativeTarget "NickSpace" */;
+			buildPhases = (
+				146B851A17AABD3A0044594A /* Sources */,
+				146B851B17AABD3A0044594A /* Frameworks */,
+				146B851C17AABD3A0044594A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				146B852E17AABE100044594A /* PBXTargetDependency */,
+			);
+			name = NickSpace;
+			productName = NickSpace;
+			productReference = 146B851E17AABD3A0044594A /* NickSpace.InnerSpace */;
+			productType = "com.apple.product-type.bundle";
+		};
+		146B854117AB09870044594A /* Neko */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 146B854B17AB09870044594A /* Build configuration list for PBXNativeTarget "Neko" */;
+			buildPhases = (
+				146B853E17AB09870044594A /* Sources */,
+				146B853F17AB09870044594A /* Frameworks */,
+				146B854017AB09870044594A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				146B856217AB94DB0044594A /* PBXTargetDependency */,
+			);
+			name = Neko;
+			productName = Neko;
+			productReference = 146B854217AB09870044594A /* Neko.InnerSpace */;
+			productType = "com.apple.product-type.bundle";
+		};
 		1489D44716E3F33B0079FC70 /* Boxes */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1489D45116E3F33B0079FC70 /* Build configuration list for PBXNativeTarget "Boxes" */;
@@ -760,10 +934,12 @@
 			);
 			dependencies = (
 				1409650D16DDE13D0046127D /* PBXTargetDependency */,
+				146B855B17AB93380044594A /* PBXTargetDependency */,
 				1489D45A16E3F3960079FC70 /* PBXTargetDependency */,
 				1409650B16DDE1380046127D /* PBXTargetDependency */,
 				140964ED16DDD7D60046127D /* PBXTargetDependency */,
 				140964EF16DDD7D60046127D /* PBXTargetDependency */,
+				146B852C17AABDFF0044594A /* PBXTargetDependency */,
 			);
 			name = InnerSpace;
 			productName = InnerSpace;
@@ -798,6 +974,8 @@
 				140964D616DDD78D0046127D /* Polyhedra */,
 				140964F716DDE06C0046127D /* Space */,
 				1489D44716E3F33B0079FC70 /* Boxes */,
+				146B851D17AABD3A0044594A /* NickSpace */,
+				146B854117AB09870044594A /* Neko */,
 			);
 		};
 /* End PBXProject section */
@@ -816,6 +994,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				140964DE16DDD78E0046127D /* InfoPlist.strings in Resources */,
+				140ABD311792334D0076AC45 /* PolyhedraViewInspector.xib in Resources */,
+				146B853C17AACEF80044594A /* Polyhedra.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,6 +1004,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140964FF16DDE06C0046127D /* InfoPlist.strings in Resources */,
+				146B853717AACECD0044594A /* Space.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -835,11 +1016,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		146B851C17AABD3A0044594A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146B852517AABD3B0044594A /* InfoPlist.strings in Resources */,
+				146B853D17AAD0050044594A /* NickSpace.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146B854017AB09870044594A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146B854917AB09870044594A /* InfoPlist.strings in Resources */,
+				146B855D17AB94470044594A /* blackcat.tiff in Resources */,
+				146B855E17AB944C0044594A /* browncat.tiff in Resources */,
+				146B855F17AB94510044594A /* nekoInfo.tiff in Resources */,
+				146B856017AB94560044594A /* whitecat.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1489D44616E3F33B0079FC70 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1489D44F16E3F33B0079FC70 /* InfoPlist.strings in Resources */,
+				146B853817AACED40044594A /* Boxes.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -847,6 +1050,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				146B855917AB93260044594A /* Neko.InnerSpace in Resources */,
+				146B853017AABE5A0044594A /* NickSpace.InnerSpace in Resources */,
 				1489D45B16E3F39F0079FC70 /* Boxes.InnerSpace in Resources */,
 				1409650E16DDE1FD0046127D /* Space.InnerSpace in Resources */,
 				140964F316DDD9910046127D /* Polyhedra.InnerSpace in Resources */,
@@ -897,6 +1102,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		146B851A17AABD3A0044594A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146B852A17AABDB40044594A /* NickSpaceView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146B853E17AB09870044594A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146B855C17AB94420044594A /* NekoView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1489D44416E3F33B0079FC70 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -919,6 +1140,7 @@
 				14085DD516F94561003B674D /* ISCollectionViewItem.m in Sources */,
 				14085DD816F9473A003B674D /* ModuleTileView.m in Sources */,
 				14A0BBBA178DF13F00A9BCF0 /* PreferencesPanelCellViewController.m in Sources */,
+				140ABD2E17922CD40076AC45 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -954,6 +1176,26 @@
 			isa = PBXTargetDependency;
 			target = 14183ABB16CDB44300959AD7 /* PSOperations */;
 			targetProxy = 1409650C16DDE13D0046127D /* PBXContainerItemProxy */;
+		};
+		146B852C17AABDFF0044594A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 146B851D17AABD3A0044594A /* NickSpace */;
+			targetProxy = 146B852B17AABDFF0044594A /* PBXContainerItemProxy */;
+		};
+		146B852E17AABE100044594A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14183ABB16CDB44300959AD7 /* PSOperations */;
+			targetProxy = 146B852D17AABE100044594A /* PBXContainerItemProxy */;
+		};
+		146B855B17AB93380044594A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 146B854117AB09870044594A /* Neko */;
+			targetProxy = 146B855A17AB93380044594A /* PBXContainerItemProxy */;
+		};
+		146B856217AB94DB0044594A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14183ABB16CDB44300959AD7 /* PSOperations */;
+			targetProxy = 146B856117AB94DB0044594A /* PBXContainerItemProxy */;
 		};
 		1489D45816E3F38E0079FC70 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -996,6 +1238,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				14183AC216CDB44300959AD7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		146B852317AABD3B0044594A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				146B852417AABD3B0044594A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		146B854717AB09870044594A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				146B854817AB09870044594A /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1216,6 +1474,74 @@
 			};
 			name = Release;
 		};
+		146B852817AABD3B0044594A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NickSpace/NickSpace-Prefix.pch";
+				INFOPLIST_FILE = "NickSpace/NickSpace-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = InnerSpace;
+			};
+			name = Debug;
+		};
+		146B852917AABD3B0044594A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NickSpace/NickSpace-Prefix.pch";
+				INFOPLIST_FILE = "NickSpace/NickSpace-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = InnerSpace;
+			};
+			name = Release;
+		};
+		146B854C17AB09870044594A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Neko/Neko-Prefix.pch";
+				INFOPLIST_FILE = "Neko/Neko-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = InnerSpace;
+			};
+			name = Debug;
+		};
+		146B854D17AB09870044594A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Neko/Neko-Prefix.pch";
+				INFOPLIST_FILE = "Neko/Neko-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = InnerSpace;
+			};
+			name = Release;
+		};
 		1489D45216E3F33B0079FC70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1259,6 +1585,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Open Logic Corporation";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1277,6 +1604,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "71A3FD5F-30EB-4F9C-9C39-071C15F43FB0";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -1290,6 +1618,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Open Logic Corporation";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1301,6 +1630,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PROVISIONING_PROFILE = "71A3FD5F-30EB-4F9C-9C39-071C15F43FB0";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -1308,11 +1638,13 @@
 		14A327CF145C6F7E00BD4F94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Open Logic Corporation";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InnerSpace/InnerSpace-Prefix.pch";
 				INFOPLIST_FILE = "InnerSpace/InnerSpace-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "71A3FD5F-30EB-4F9C-9C39-071C15F43FB0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1320,11 +1652,13 @@
 		14A327D0145C6F7E00BD4F94 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Open Logic Corporation";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InnerSpace/InnerSpace-Prefix.pch";
 				INFOPLIST_FILE = "InnerSpace/InnerSpace-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "71A3FD5F-30EB-4F9C-9C39-071C15F43FB0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1367,6 +1701,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		146B852717AABD3B0044594A /* Build configuration list for PBXNativeTarget "NickSpace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				146B852817AABD3B0044594A /* Debug */,
+				146B852917AABD3B0044594A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		146B854B17AB09870044594A /* Build configuration list for PBXNativeTarget "Neko" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				146B854C17AB09870044594A /* Debug */,
+				146B854D17AB09870044594A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		1489D45116E3F33B0079FC70 /* Build configuration list for PBXNativeTarget "Boxes" */ = {
 			isa = XCConfigurationList;

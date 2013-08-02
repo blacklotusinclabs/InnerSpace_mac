@@ -13,6 +13,7 @@
 #import "ScreensView.h"
 #import "ScreenButton.h"
 #import "ModuleTile.h"
+#import "Constants.h"
 
 @implementation PreferencesPanelController
 
@@ -23,6 +24,11 @@
     {
         // Initialize
         moduleArray = [[NSMutableArray alloc] initWithCapacity:10];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(startModule:)
+                                                     name:ISModuleChangedNotification
+                                                   object:nil];
     }
     return self;
 }
@@ -58,9 +64,9 @@
         ModuleTile *tile = [[ModuleTile alloc] init];
         
         // Get icon if it's present...
-        if([view respondsToSelector:@selector(icon)])
+        if([view respondsToSelector:@selector(preview)])
         {
-            tile.image = [view icon];
+            tile.image = [view preview];
         }
         else
         {
@@ -98,16 +104,9 @@
                                                  name:ScreensViewSelectedScreenNotification
                                                object:nil];
     
-    /*
-    [tiles addObserver:self
-            forKeyPath:@"selectionIndexes"
-               options:NSKeyValueObservingOptionNew
-               context:nil];
-    */
-    
     [self loadAllModules];
 
-    [controlsView setContentView:emptyView];
+    // [controlsView setContentView:emptyView];
     [window makeKeyAndOrderFront:self];
     
 }
@@ -166,37 +165,21 @@
         
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         NSString *defaultsString = [NSString stringWithFormat:@"currentModule_%@",screenId];
+        NSString *currentModuleName = [defaults objectForKey:defaultsString];
+        if([moduleName isEqualToString:currentModuleName] == NO)
+        {
+            [dict setObject:[NSNumber numberWithBool:NO] forKey:@"start"];
+        }
+
         [defaults setObject: module forKey: defaultsString];
         
         [[NSNotificationCenter defaultCenter]
-         postNotificationName:@"ISSelectSaverForScreeNotification"
+         postNotificationName:ISSelectSaverForScreenNotification
          object:nil
          userInfo:dict];
     }
     NSLog(@"Selected %ld",row);
 }
-
-/*
-- (void) inBackground: (id)sender
-{
-    isInBackground = ([inBackground state] == NSOnState);
-}
-
-- (void) locker: (id)sender
-{
-    isLocker = ([locker state] == NSOnState);
-}
-
-- (void) saver: (id)sender
-{
-    isSaver = ([saver state] == NSOnState);
-}
-
-- (void) doSaver: (id)sender
-{
-    [parentController startSaver];
-}
-*/
 
 - (void)startModule: (NSNotification *)notification
 {
@@ -206,15 +189,24 @@
         NSView *inspectorView = nil;
         
         inspectorView = [moduleView inspector: self];
-        [inspectorView retain];
-        // NSLog(@"inspectorView %@",inspectorView);
-        [(NSBox *)controlsView setBorderType: NSGrooveBorder];
-        [(NSBox *)controlsView setContentView: inspectorView];
-        if([moduleView respondsToSelector: @selector(inspectorInstalled)])
+        if(inspectorView != nil)
         {
-            NSLog(@"installed");
-            [moduleView inspectorInstalled];
+            [(NSBox *)controlsView setBorderType: NSGrooveBorder];
+            [(NSBox *)controlsView setContentView: inspectorView];
+            if([moduleView respondsToSelector: @selector(inspectorInstalled)])
+            {
+                NSLog(@"installed");
+                [moduleView inspectorInstalled];
+            }
         }
+        else
+        {
+            [controlsView setContentView:emptyView];
+        }
+    }
+    else
+    {
+        [controlsView setContentView:emptyView];
     }
 }
 
@@ -224,34 +216,23 @@
     NSString *screenKey = [NSString stringWithFormat:@"currentModule_%@",screenId];
     NSMutableDictionary *appDefs = [NSDictionary dictionaryWithObjectsAndKeys:
                                     @"Polyhedra",screenKey,nil];
-    NSInteger row = 0;
+    // NSInteger row = 0;
     float runSpeed = 0.10;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSMutableDictionary *modules = [parentController modules];
+    // NSMutableDictionary *modules = [parentController modules];
     
     [defaults setFloat: runSpeed forKey: @"runSpeed"];
     defaults = [NSUserDefaults standardUserDefaults];
     [defaults registerDefaults: appDefs];    
 
+    /*
     currentModuleName = [defaults stringForKey: screenKey];
     if(currentModuleName == nil || [currentModuleName isEqualToString:@""])
     {
         currentModuleName = @"Polyhedra"; // default...
     }
-    
-    NSArray *array = [[modules allKeys] sortedArrayUsingSelector:@selector(compare:)];
-    row = [array indexOfObject: currentModuleName];
-    if(row < [[modules allKeys] count])
-    {
-        NSIndexSet *rowIndex = [NSIndexSet indexSetWithIndex:row];
-        /*
-        [moduleList reloadData];
-        [moduleList selectRowIndexes:rowIndex byExtendingSelection:NO];
-        [moduleList scrollRowToVisible:row]; // + 2];
-         */
-    }
-    
     NSLog(@"current module = %@",currentModuleName);
+     */
 }
 
 - (void) setParentController:(InnerSpaceController *)controller
@@ -262,11 +243,6 @@
 - (InnerSpaceController *)parentController
 {
     return parentController;
-}
-
-- (NSString *)moduleNameForScreen:(NSScreen *)screen
-{
-    
 }
 
 @end
@@ -288,20 +264,6 @@
     cellViewController.description.stringValue = tile.moduleName;
     
     return view;
-}
-
-/*
-- (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
-{
-    NSArray *array = [[[parentController modules] allKeys] sortedArrayUsingSelector:@selector(compare:)];
-    return [array objectAtIndex:rowIndex];
-}
-*/
-
-- (void)tableView:(NSTableView *)tableView didClickTableColumn:(NSTableColumn *)tableColumn
-{
-    NSUInteger clickedRow = [tableView clickedRow];
-    NSLog(@"%ld",(unsigned long)clickedRow);
 }
 @end
 

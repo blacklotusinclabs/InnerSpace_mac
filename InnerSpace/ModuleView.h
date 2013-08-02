@@ -26,4 +26,5 @@
 - (void) stopModule;
 
 - (NSImage *)icon;
+- (NSImage *)preview;
 @end

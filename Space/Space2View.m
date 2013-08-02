@@ -52,86 +52,94 @@ float randBetween(float lower, float upper)
 
 - oneStep
 {
-  int i, count, starsInArray = 0;
-  STAR *p;
-  NSRect bounds = [self bounds];
-
-  if (nstars < NSTARS) [self addStar];
-  
-  for (i=0; i<nstars; i++)
+    int i, count, starsInArray = 0;
+    STAR *p;
+    NSRect bounds = [self bounds];
+    
+    if (nstars < NSTARS) [self addStar];
+    
+    for (i=0; i<nstars; i++)
     {
-      p = &stars[i];
-      p->distance += p->delta;
-      p->delta *= p->ddelta;
-      p->theta += 0.012;
-      if (p->theta > (2*PI)) p->theta -= (2*PI);
-      
-      [self convertToXY:p];
-      
-      // only draw the star if it moved > 1 pixel
-      if (p->draw.origin.x != p->erase.origin.x || 
-	  p->draw.origin.y != p->erase.origin.y)
-	{
-	  // add star to the erasure array
-	  b[starsInArray] = p->erase;
-	  
-	  if (p->distance > p->changepoint[p->changemode])
-	    {
-	      (p->changemode)++;
-	      p->draw.size = sizeArray[p->changemode];
-	    }
-	  
-	  // clipping is off, so we must not draw outside view.
-	  // replace stars that go too far...
-	  if (p->draw.origin.x < 0 ||
-	      p->draw.origin.y < 0 ||
-	      p->draw.origin.x + 4 > bounds.size.width ||
-	      p->draw.origin.y + 4 > bounds.size.height)
-	    {
-	      [self replaceStarAt:i];
-	    }
-	  
-	  w[starsInArray++] = p->draw;
-	  
-	  p->erase = p->draw;
-	}
+        p = &stars[i];
+        p->distance += p->delta;
+        p->delta *= p->ddelta;
+        p->theta += 0.012;
+        if (p->theta > (2*PI)) p->theta -= (2*PI);
+        
+        [self convertToXY:p];
+        
+        // only draw the star if it moved > 1 pixel
+        if (p->draw.origin.x != p->erase.origin.x ||
+            p->draw.origin.y != p->erase.origin.y)
+        {
+            // add star to the erasure array
+            b[starsInArray] = p->erase;
+            
+            if (p->distance > p->changepoint[p->changemode])
+            {
+                (p->changemode)++;
+                p->draw.size = sizeArray[p->changemode];
+            }
+            
+            // clipping is off, so we must not draw outside view.
+            // replace stars that go too far...
+            if (p->draw.origin.x < 0 ||
+                p->draw.origin.y < 0 ||
+                p->draw.origin.x + 4 > bounds.size.width ||
+                p->draw.origin.y + 4 > bounds.size.height)
+            {
+                [self replaceStarAt:i];
+            }
+            
+            w[starsInArray++] = p->draw;
+            
+            p->erase = p->draw;
+        }
     }
-  
-  if (starsInArray)
+    
+    if (starsInArray)
     {
-      count = 0;
-      while (count < starsInArray)
-	{
-	  // You get the best performance if you put out all the stars
-	  // at once.  This causes noticable flicker, so I put out 
-	  // 100 of the stars per iteration.  This gives reasonable speed
-	  // and flicker is hardly noticable.  Besides, stars
-	  // _should_ flicker a little...
-	  
-	  int t = (starsInArray - count);
-	  i = (t < STARSPERIT)?t:STARSPERIT;
-	  
-	  PSsetgray(0.0);
-	  NSRectFillList(&b[count],i);
-	  
-	  PSsetgray(1.0);
-	  NSRectFillList(&w[count],i);
-	  
-	  count += STARSPERIT;
-	}
+        count = 0;
+        while (count < starsInArray)
+        {
+            // You get the best performance if you put out all the stars
+            // at once.  This causes noticable flicker, so I put out
+            // 100 of the stars per iteration.  This gives reasonable speed
+            // and flicker is hardly noticable.  Besides, stars
+            // _should_ flicker a little...
+            
+            int t = (starsInArray - count);
+            i = (t < STARSPERIT)?t:STARSPERIT;
+            
+            PSsetgray(0.0);
+            NSRectFillList(&b[count],i);
+            
+            PSsetgray(1.0);
+            NSRectFillList(&w[count],i);
+            
+            count += STARSPERIT;
+        }
     }
-  
+    // [self setNeedsDisplay:YES];
+    
   return self;
 }
 
 - initWithFrame:(NSRect)frameRect
 {
-  [super initWithFrame:frameRect];
-  // [self allocateGState];		// For faster lock/unlockFocus
-  // [self setClipping:NO];		// even faster...
-  [self setRadius];
-  
-  return self;
+    self = [super initWithFrame:frameRect];
+    if(nil != self)
+    {
+        // [self allocateGState];		// For faster lock/unlockFocus
+        // [self setClipping:NO];		// even faster...
+        [self setRadius];
+    }
+    return self;
+}
+
+- (NSImage *)preview
+{
+    return [NSImage imageNamed:@"Space"];
 }
 
 - drawRect:(NSRect)rects 

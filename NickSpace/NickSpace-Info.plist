@@ -7,11 +7,13 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string></string>
+	<string>NickSpace</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.openlogic.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.openlogiccorp.InnerSpace</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>Preview</key>
+	<string>NickSpace</string>
 	<key>CFBundleName</key>
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>

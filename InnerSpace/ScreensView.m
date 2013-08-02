@@ -51,14 +51,14 @@ NSString *ScreensViewSelectedScreenNotification = @"ScreensViewSelectedScreenNot
     return self;
 }
 
-/*
 - (void)awakeFromNib
 {
     // Select first view...
     ScreenButton *button = (ScreenButton *)[[self subviews] objectAtIndex:0];
-    [self screenSelected:button];
+    [button performSelector:@selector(performClick:)
+                 withObject:self
+                 afterDelay:(NSTimeInterval)0.5];
 }
- */
 
 - (void)drawRect:(NSRect)dirtyRect
 {

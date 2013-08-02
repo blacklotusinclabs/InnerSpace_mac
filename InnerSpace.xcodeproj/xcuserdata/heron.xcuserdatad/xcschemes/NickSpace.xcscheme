@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1489D46016E3F97A0079FC70"
+               BlueprintIdentifier = "146B851D17AABD3A0044594A"
                BuildableName = "NickSpace.InnerSpace"
                BlueprintName = "NickSpace"
                ReferencedContainer = "container:InnerSpace.xcodeproj">
