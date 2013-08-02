@@ -231,11 +231,16 @@ CGFloat randBetween(CGFloat lower, CGFloat upper)
 	return self;
 }
 
+- (NSTimeInterval) animationDelayTime
+{
+    return (NSTimeInterval)(1.0/8.0);
+}
+
 
 - oneStep
 {
     NSRect bounds = [self bounds];
-	usleep(1000000 / 8);	// run at about 8 frames/sec
+	// usleep(1000000 / 8);	// run at about 8 frames/sec
 
 	[self CalcDxDy];
 
