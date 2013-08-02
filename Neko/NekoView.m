@@ -236,7 +236,6 @@ CGFloat randBetween(CGFloat lower, CGFloat upper)
     return (NSTimeInterval)(1.0/8.0);
 }
 
-
 - oneStep
 {
     NSRect bounds = [self bounds];
