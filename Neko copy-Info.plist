@@ -7,13 +7,11 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string>NickSpace</string>
+	<string></string>
 	<key>CFBundleIdentifier</key>
 	<string>com.openlogiccorp.InnerSpace</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
-	<key>Preview</key>
-	<string>NickSpace</string>
 	<key>CFBundleName</key>
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
@@ -27,8 +25,6 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2013 Open Logic Corporation. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
-	<string>NickSpaceView</string>
-	<key>Description</key>
-	<string>Multicolored lines create a maze-like visual effect.</string>
+	<string>NekoView</string>
 </dict>
 </plist>

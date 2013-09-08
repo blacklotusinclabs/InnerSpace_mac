@@ -153,12 +153,12 @@
     
     NSInteger row = [modulesTableView selectedRow];
     NSMutableDictionary *modules = [parentController modules];
+    NSNumber *screenId = [[screen deviceDescription] objectForKey:@"NSScreenNumber"];
     
     if(row >= 0)
     {
         NSArray *array = [[modules allKeys] sortedArrayUsingSelector:@selector(compare:)];
         NSString *moduleName = [array objectAtIndex:row];
-        NSNumber *screenId = [[screen deviceDescription] objectForKey:@"NSScreenNumber"];
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
         [dict setObject:moduleName forKey:@"module"];
         [dict setObject:screenId forKey:@"screen"];
@@ -168,22 +168,24 @@
         NSString *currentModuleName = [defaults objectForKey:defaultsString];
         if([moduleName isEqualToString:currentModuleName] == NO)
         {
-            [dict setObject:[NSNumber numberWithBool:NO] forKey:@"start"];
+            [defaults setObject: module forKey: defaultsString];
+            
+            [[NSNotificationCenter defaultCenter]
+             postNotificationName:ISSelectSaverForScreenNotification
+             object:nil
+             userInfo:dict];
         }
-
-        [defaults setObject: module forKey: defaultsString];
-        
-        [[NSNotificationCenter defaultCenter]
-         postNotificationName:ISSelectSaverForScreenNotification
-         object:nil
-         userInfo:dict];
+        else
+        {
+            ModuleView *moduleView = [parentController moduleViewForScreen:screen];
+            [self startModuleWithModuleView:moduleView];
+        }
     }
     NSLog(@"Selected %ld",row);
 }
 
-- (void)startModule: (NSNotification *)notification
+- (void)startModuleWithModuleView: (ModuleView *)moduleView
 {
-    ModuleView *moduleView = (ModuleView *)[notification object];
     if([moduleView respondsToSelector: @selector(inspector:)])
     {
         NSView *inspectorView = nil;
@@ -210,6 +212,12 @@
     }
 }
 
+- (void)startModule: (NSNotification *)notification
+{
+    ModuleView *moduleView = (ModuleView *)[notification object];
+    [self startModuleWithModuleView:moduleView];
+}
+
 - (void) loadDefaults
 {
     NSNumber *screenId = [[screen deviceDescription] objectForKey:@"NSScreenNumber"];
@@ -224,15 +232,6 @@
     [defaults setFloat: runSpeed forKey: @"runSpeed"];
     defaults = [NSUserDefaults standardUserDefaults];
     [defaults registerDefaults: appDefs];    
-
-    /*
-    currentModuleName = [defaults stringForKey: screenKey];
-    if(currentModuleName == nil || [currentModuleName isEqualToString:@""])
-    {
-        currentModuleName = @"Polyhedra"; // default...
-    }
-    NSLog(@"current module = %@",currentModuleName);
-     */
 }
 
 - (void) setParentController:(InnerSpaceController *)controller

@@ -124,6 +124,13 @@ void DisplayReconfigurationCallBack (CGDirectDisplayID display,
     [self doSaverInBackground:self];
 }
 
+- (ModuleView *) moduleViewForScreen:(NSScreen *)screen
+{
+    SaverWindow *window = [screensToWindows objectForKey:screen];
+    ModuleView *view = (ModuleView *)[window contentView];
+    return view;
+}
+
 - (void) createSaverWindow:(BOOL)desktop
                  forScreen:(NSScreen *)screen
            withModuleNamed:(NSString *)currentModuleName

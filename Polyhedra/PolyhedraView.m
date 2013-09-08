@@ -820,7 +820,7 @@ CGFloat distance(CGFloat xcrd, CGFloat ycrd, CGFloat zcrd)
     // Decide which Polyhedron.
     if (selectedIndex == -1)
     {
-        polyhedron   = random() % 5;
+        polyhedron   = 3; // random() % 5;
         selectedIndex = polyhedron;
         [selectionMatrix selectCellAtRow:polyhedron column:0];
     }

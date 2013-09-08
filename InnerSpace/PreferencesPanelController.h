@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class InnerSpaceController;
+@class ModuleView;
 
 @interface PreferencesPanelController : NSObject <NSTableViewDataSource, NSTableViewDelegate>
 {
@@ -49,6 +50,7 @@
 
 // Load & Find modules...
 - (void) loadDefaults;
+- (void)startModuleWithModuleView: (ModuleView *)moduleView;
 
 - (void) setParentController:(InnerSpaceController *)controller;
 - (InnerSpaceController *)parentController;
