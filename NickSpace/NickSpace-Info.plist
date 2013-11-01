@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>NickSpace</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.openlogiccorp.InnerSpace</string>
+	<string>com.openlogic.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>Preview</key>

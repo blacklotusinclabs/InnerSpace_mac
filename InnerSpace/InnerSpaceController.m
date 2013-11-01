@@ -20,7 +20,7 @@ void DisplayReconfigurationCallBack (CGDirectDisplayID display,
                                      void *userInfo)
 {
     InnerSpaceController *controller = (InnerSpaceController *)userInfo;
-    [controller destroySaverWindow];
+    // [controller destroySaverWindow];
     [controller createSaverWindow:YES];
 }
 #endif
@@ -388,7 +388,8 @@ void DisplayReconfigurationCallBack (CGDirectDisplayID display,
     if(timer != nil)
     {
         [timer invalidate];
-        [timer release];
+        // [timer release];
+        NSMapRemove(timersToModules,module);
         timer = nil;
     }
  
