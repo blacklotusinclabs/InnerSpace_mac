@@ -57,6 +57,7 @@
 		14A327C1145C6F7D00BD4F94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A327C0145C6F7D00BD4F94 /* main.m */; };
 		14A327C5145C6F7D00BD4F94 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 14A327C3145C6F7D00BD4F94 /* Credits.rtf */; };
 		14A327CB145C6F7E00BD4F94 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14A327C9145C6F7E00BD4F94 /* MainMenu.xib */; };
+		14A6D9431826F33C00514DB6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A6D9421826F33C00514DB6 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,7 +113,6 @@
 /* Begin PBXFileReference section */
 		1402401516EC14A3005BDB19 /* InnerSpace_Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = InnerSpace_Icon.icns; path = InnerSpace/InnerSpace_Icon.icns; sourceTree = "<group>"; };
 		1403083817D062E6003C142B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		1403085017D06B61003C142B /* Neko copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Neko copy-Info.plist"; path = "/Users/heron/Development/innerspace/Neko copy-Info.plist"; sourceTree = "<absolute>"; };
 		14085DCE16F7F3B2003B674D /* ModuleTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleTile.h; sourceTree = "<group>"; };
 		14085DCF16F7F3B2003B674D /* ModuleTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleTile.m; sourceTree = "<group>"; };
 		14085DD116F8D8DB003B674D /* DefaultIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultIcon.png; sourceTree = "<group>"; };
@@ -232,6 +232,8 @@
 		14A327C2145C6F7D00BD4F94 /* InnerSpace-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InnerSpace-Prefix.pch"; sourceTree = "<group>"; };
 		14A327C4145C6F7D00BD4F94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		14A327CA145C6F7E00BD4F94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		14A6D93F1826F1D800514DB6 /* InnerSpace.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = InnerSpace.entitlements; sourceTree = "<group>"; };
+		14A6D9421826F33C00514DB6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		14E2F52A16B9D0BD0006A4B9 /* PSOperators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSOperators.h; path = ../InnerSpace/PSOperators.h; sourceTree = "<group>"; };
 		14E2F52B16B9D0BD0006A4B9 /* PSOperators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSOperators.m; path = ../InnerSpace/PSOperators.m; sourceTree = "<group>"; };
 		14FDB8F41503FEF7007CE238 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -282,6 +284,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A6D9431826F33C00514DB6 /* StoreKit.framework in Frameworks */,
 				1403083917D062E6003C142B /* IOKit.framework in Frameworks */,
 				14A327B5145C6F7D00BD4F94 /* Cocoa.framework in Frameworks */,
 			);
@@ -606,14 +609,12 @@
 		14A327A5145C6F7D00BD4F94 = {
 			isa = PBXGroup;
 			children = (
-				1403083817D062E6003C142B /* IOKit.framework */,
 				140964AE16DDD5DC0046127D /* Supporting Frameworks */,
 				140964AD16DDD5C80046127D /* Modules */,
 				14A327BA145C6F7D00BD4F94 /* InnerSpace */,
 				14A327BB145C6F7D00BD4F94 /* Supporting Files */,
 				14A327B3145C6F7D00BD4F94 /* Frameworks */,
 				14A327B1145C6F7D00BD4F94 /* Products */,
-				1403085017D06B61003C142B /* Neko copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -633,6 +634,8 @@
 		14A327B3145C6F7D00BD4F94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				14A6D9421826F33C00514DB6 /* StoreKit.framework */,
+				1403083817D062E6003C142B /* IOKit.framework */,
 				14A327B4145C6F7D00BD4F94 /* Cocoa.framework */,
 				14FDB8F41503FEF7007CE238 /* CoreFoundation.framework */,
 				14A327B6145C6F7D00BD4F94 /* Other Frameworks */,
@@ -653,6 +656,7 @@
 		14A327BA145C6F7D00BD4F94 /* InnerSpace */ = {
 			isa = PBXGroup;
 			children = (
+				14A6D93F1826F1D800514DB6 /* InnerSpace.entitlements */,
 				1409651516DEA8BD0046127D /* Classes */,
 				1409651416DEA8A60046127D /* Resources */,
 			);
@@ -794,6 +798,14 @@
 				TargetAttributes = {
 					14A327AF145C6F7D00BD4F94 = {
 						DevelopmentTeam = 7PR8VYH29V;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1357,14 +1369,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = InnerSpace/InnerSpace.entitlements;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Open Logic Corporation (7PR8VYH29V)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "3rd Party Mac Developer Application: Open Logic Corporation (7PR8VYH29V)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InnerSpace/InnerSpace-Prefix.pch";
 				INFOPLIST_FILE = "InnerSpace/InnerSpace-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BFCB0007-123E-42BF-9D5E-27ABE936CDBF";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1373,14 +1385,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = InnerSpace/InnerSpace.entitlements;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Open Logic Corporation (7PR8VYH29V)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "3rd Party Mac Developer Application: Open Logic Corporation (7PR8VYH29V)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InnerSpace/InnerSpace-Prefix.pch";
 				INFOPLIST_FILE = "InnerSpace/InnerSpace-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BFCB0007-123E-42BF-9D5E-27ABE936CDBF";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
